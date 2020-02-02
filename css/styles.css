@@ -1399,7 +1399,12 @@ body {
   .contactarme .container .btn .contact-now {
     width: fit-content;
     margin: auto;
-    padding: 18px 32px; } }
+    padding: 18px 32px; }
+
+  .header-servicios .container .title-and-subtitle h1 {
+    font-size: 2.5em; }
+  .header-servicios .container .title-and-subtitle p {
+    font-size: 1.125em; } }
 @media (min-width: 768px) {
   .header #svg {
     display: none; }
@@ -1644,7 +1649,15 @@ body {
     max-width: 834px;
     margin: auto;
     margin-bottom: 20px;
-    text-align: center; } }
+    text-align: center; }
+
+  .header-servicios {
+    background: url(../img/fondos/servicios.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 35rem;
+    height: 100%; } }
 @media (min-width: 1200px) {
   body {
     overflow-x: hidden; }
@@ -2002,7 +2015,14 @@ body {
   .contactarme .container .title h2 {
     font-size: 2.5em; }
   .contactarme .container .title .title-2 h2 {
-    font-size: 2.5em; } }
+    font-size: 2.5em; }
+
+  .header-servicios {
+    min-height: 35rem; }
+    .header-servicios .container {
+      min-height: 25rem; }
+      .header-servicios .container .title-and-subtitle h1 {
+        font-size: 3.5em; } }
 @media (min-width: 1367px) {
   .container {
     max-width: 1200px; }
