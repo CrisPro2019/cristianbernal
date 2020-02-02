@@ -542,17 +542,17 @@ body {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-template-areas: "s1 s1 s1 s1 s1 s1" "s2 s2 s2 s2 s2 s2" "s3 s3 s3 s3 s3 s3" "s4 s4 s4 s4 s4 s4" "s5 s5 s5 s5 s5 s5" "s6 s6 s6 s6 s6 s6"; }
-    .services .container .box-services .box-1 {
+    .services .container .box-services #box1 {
       grid-area: s1; }
-    .services .container .box-services .box-2 {
+    .services .container .box-services #box2 {
       grid-area: s2; }
-    .services .container .box-services .box-3 {
+    .services .container .box-services #box3 {
       grid-area: s3; }
-    .services .container .box-services .box-4 {
+    .services .container .box-services #box4 {
       grid-area: s4; }
-    .services .container .box-services .box-5 {
+    .services .container .box-services #box5 {
       grid-area: s5; }
-    .services .container .box-services .box-6 {
+    .services .container .box-services #box6 {
       grid-area: s6; }
     .services .container .box-services .box {
       margin: auto;

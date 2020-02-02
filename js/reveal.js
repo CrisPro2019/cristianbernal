@@ -1,7 +1,6 @@
 const sr = ScrollReveal()
 
 sr.reveal(".header", {
-    delay: 600,
     duration: 800,
     opacity: 0, 
     scale: 1.3,
@@ -10,16 +9,14 @@ sr.reveal(".header", {
 })
 
 sr.reveal(".logo", {
-    delay: 500,
-    duration: 1200,
+    duration: 1000,
     distance: "200px",
     origin: "left", 
     mobile: false,
 })
 
 sr.reveal(".navbar", {
-    delay: 600,
-    duration: 1200,
+    duration: 1000,
     distance: "200px",
     origin: "rigth", 
     mobile: false,
@@ -27,8 +24,8 @@ sr.reveal(".navbar", {
 
 
 sr.reveal(".info-1", {
-    delay: 700,
-    duration: 1200,
+    delay: 100,
+    duration: 1100,
     distance: "200px",
     origin: "left", 
     mobile: false,
@@ -36,7 +33,7 @@ sr.reveal(".info-1", {
 
 
 sr.reveal(".info-2", {
-    delay: 800,
+    delay: 200,
     duration: 1200,
     distance: "200px",
     origin: "left",
@@ -44,7 +41,7 @@ sr.reveal(".info-2", {
 })
 
 sr.reveal(".information", {
-    delay: 900,
+    delay: 300,
     duration: 1200,
     distance: "200px",
     origin: "left", 
@@ -52,7 +49,7 @@ sr.reveal(".information", {
 })
 
 sr.reveal(".info-buttons", {
-    delay: 1000,
+    delay: 400,
     duration: 1200,
     distance: "200px",
     origin: "left", 
@@ -84,7 +81,7 @@ sr.reveal(".circle-3", {
 })
 
 sr.reveal(".title", {
-    delay: 300,
+    delay: 100,
     duration: 600,
     distance: "200px",
     origin: "bottom", 
@@ -92,7 +89,7 @@ sr.reveal(".title", {
 })
 
 sr.reveal(".line", {
-    delay: 400,
+    delay: 200,
     duration: 600,
     distance: "200px",
     origin: "bottom", 
@@ -115,56 +112,56 @@ sr.reveal(".info-mi", {
     mobile: false,
 })
 
-// sr.reveal(".box-1", {
-//     delay: 200,
-//     duration: 1000,
-//     distance: "200px",
-//     origin: "bottom", 
-//     mobile: false,
-// })
+sr.reveal("#box1", {
+    delay: 200,
+    duration: 1000,
+    distance: "200px",
+    origin: "left", 
+    mobile: false,
+})
 
-// sr.reveal(".box-2", {
-//     delay: 300,
-//     duration: 1000,
-//     distance: "200px",
-//     origin: "bottom", 
-//     mobile: false,
-// })
+sr.reveal("#box2", {
+    delay: 300,
+    duration: 1000,
+    distance: "200px",
+    origin: "bottom", 
+    mobile: false,
+})
 
-// sr.reveal(".box-3", {
-//     delay: 400,
-//     duration: 1000,
-//     distance: "200px",
-//     origin: "bottom", 
-//     mobile: false,
-// })
+sr.reveal("#box3", {
+    delay: 400,
+    duration: 1000,
+    distance: "200px",
+    origin: "right", 
+    mobile: false,
+})
 
-// sr.reveal(".box-4", {
-//     delay: 200,
-//     duration: 1000,
-//     distance: "200px",
-//     origin: "bottom", 
-//     mobile: false,
-// })
+sr.reveal("#box4", {
+    delay: 200,
+    duration: 1000,
+    distance: "200px",
+    origin: "left", 
+    mobile: false,
+})
 
-// sr.reveal(".box-5", {
-//     delay: 300,
-//     duration: 1000,
-//     distance: "200px",
-//     origin: "bottom", 
-//     mobile: false,
-// })
+sr.reveal("#box5", {
+    delay: 300,
+    duration: 1000,
+    distance: "200px",
+    origin: "bottom", 
+    mobile: false,
+})
 
-// sr.reveal(".box-6", {
-//     delay: 400,
-//     duration: 1000,
-//     distance: "200px",
-//     origin: "bottom", 
-//     mobile: false,
-// })
+sr.reveal("#box6", {
+    delay: 400,
+    duration: 1000,
+    distance: "200px",
+    origin: "right", 
+    mobile: false,
+})
 
 sr.reveal(".buttons", {
-    delay: 400,
+    delay: 300,
     duration: 1000,
     distance: "200px",
     origin: "bottom", 
