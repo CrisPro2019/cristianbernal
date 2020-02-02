@@ -1,0 +1,13 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 814.82 657.93">
+<defs>
+<style>
+.cls-1{fill:url(#Degradado_sin_nombre_2);}
+</style>
+<linearGradient id="Degradado_sin_nombre_2" x1="0.86" y1="1024.12" x2="0.86" y2="1022.45" gradientTransform="matrix(490, 0, 0, -395.65, 219.1, 405364.93)" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#ffd54d"/>
+<stop offset="1" stop-color="#ffc200"/>
+</linearGradient>
+</defs>
+<title>info-img</title>
+<path id="Trazado_63" data-name="Trazado 63" class="cls-1" d="M705.63,168.26c193.79,0,417.41,439.84,320.52,575.36S347.91,835.91,251,700.39,511.85,168.26,705.63,168.26Z" transform="translate(-234.69 -168.26)"/>
+</svg>

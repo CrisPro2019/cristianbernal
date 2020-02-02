@@ -1,0 +1,214 @@
+// ============== NAV ================
+.nav
+    position: fixed
+    width: 100%
+    z-index: 3000
+    transition: all 0.3s ease
+    &.active
+        background: $primary-color
+        box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3)
+    &.active-2
+        background: white
+    .container-nav
+        position: relative
+        padding: 12px 14px
+        display: flex
+        justify-content: space-between
+        .logo
+            width: 100%
+            height: auto
+            svg
+                width: 220px
+                .cls-2
+                    &.active
+                        fill: black
+        .list-menu
+            position: absolute
+            width: 100% 
+            background: white   
+            left: 100%
+            top: 100%
+            height: calc(100vh - 5rem)
+            padding: 10px
+            min-height: 20rem
+            visibility: hidden
+            display: flex
+            align-items: center
+            font-family: $font-poppins 
+            z-index: 1000 
+            transition: all 0.3s ease
+            overflow: scroll
+            &.active
+                visibility: visible
+                left: 0
+            ul
+                list-style: none
+                width: 100%
+                position: relative
+                li
+                    width: 100%
+                    margin: auto
+                    a
+                        display: block
+                        padding: 4%
+                        text-align: center
+                        font-size: 1.563em
+                        text-decoration: none
+                        text-transform: capitalize
+                        font-weight: 600
+                        color: #666666
+                        transition: all 0.3s ease
+                        &:hover
+                            color: $primary-color
+                    .nav-active
+                        color: $secondary-color
+                        &:hover
+                            color: $secondary-color
+                .redes
+                    width: 100%
+                    text-align: center
+                    p
+                        font-size: 1.250em
+                        color: $secondary-color
+                        font-weight: 600
+                    .list-redes
+                        width: 100%
+                        position: relative
+                        display: flex
+                        justify-content: center
+                        padding: 10px 0
+                        a
+                            position: relative
+                            margin: 0 10px
+                            text-decoration: none
+                            transition: all 0.3s ease
+                            background: $primary-color
+                            border-radius: 50px
+                            width: 40px
+                            height: 40px
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            color: white
+                            &:hover
+                                background: $secondary-color
+        .menu-icon
+            position: absolute
+            background: $secondary-color
+            top: 0
+            right: 0
+            width: 76px
+            height: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            cursor: pointer
+            .icon
+                position: relative
+                z-index: 100
+                margin: auto
+                width: 30px
+                height: 20px
+                display: flex
+                align-items: center
+                flex-direction: column
+                justify-content: space-between
+                .linea-1
+                    position: relative
+                    width: 100%
+                    height: 2px
+                    background: white
+                    transition: all 0.3s ease
+                    &.active
+                        top: 9px
+                        transform: rotate(45deg)
+                .linea-2
+                    width: 100%
+                    height: 2px
+                    background: white
+                    transition: all 0.3s ease
+                    opacity: 1
+                    &.active
+                        opacity: 0
+                .linea-3
+                    position: relative
+                    width: 100%
+                    height: 2px
+                    background: white
+                    transition: all 0.3s ease
+                    &.active
+                        bottom: 9px
+                        transform: rotate(-45deg)
+@media (min-width: 576px) //and (max-width: 767.98px) 
+    .nav
+        .container-nav
+            .list-menu
+                ul
+                    li
+                        a
+                            padding: 2% 
+                            font-weight: 500
+@media (min-width: 992px)
+    .nav
+        .container-nav
+            width: 100%
+            .logo
+                width: 30%
+            .list-menu
+                width: 70%
+                padding: 0
+                position: relative
+                visibility: visible
+                left: 0
+                min-height: auto 
+                overflow: hidden
+                height: auto
+                background: none
+                ul
+                    display: flex
+                    li
+                        a
+                            font-size: 1em
+                            text-transform: uppercase
+                            padding: 10px
+                            color: rgba(255, 255, 255, 0.7)
+                            font-weight: 300
+                            &:hover
+                                color: rgba(255, 255, 255, 1) 
+                        .nav-active
+                            font-weight: 500
+                .redes
+                    display: none
+            .menu-icon
+                display: none
+@media (min-width: 1200px)
+    .nav
+        .container-nav
+            padding: 30px 10px
+            max-width: 1200px
+            margin: auto
+            transition: all 0.3s ease
+            .logo
+                svg
+                    transition: all 0.3s ease
+                    width: 300px
+            .list-menu
+                ul
+                    justify-content: flex-end
+                    li
+                        width: auto
+                        margin: 0
+                        a
+                            padding: 10px 25px
+            &.active
+                padding: 20px 10px
+                .logo
+                    svg
+                        width: 220px
+@media (min-width: 1367px)
+    .nav
+        .container-nav
+            padding: 30px 10px
+            max-width: 1400px
+            margin: auto
+            transition: all 0.3s ease

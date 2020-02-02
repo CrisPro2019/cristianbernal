@@ -1,0 +1,906 @@
+@import components/variables
+@import components/mixins
+@import components/fonts
+
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body::-webkit-scrollbar
+    width: 8px
+    height: 8px
+    background: rgba(31, 67, 99, 0.2)
+
+body::-webkit-scrollbar-thumb
+    background: rgb(254, 194, 0.8)
+    border-radius: 4px
+    &:hover
+        background: rgb(254, 194, 0.8)
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1)
+
+body
+    position: relative
+    .scroll-down
+        position: fixed
+        bottom: 20px
+        right: 20px
+        width: 50px
+        height: 50px
+        background: $secondary-color
+        border-radius: 10px
+        box-shadow: 0px 11px 30px -5px $secondary-color
+        z-index: 2000
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all 0.3s ease
+        opacity: 0
+        visibility: hidden
+        cursor: pointer
+        &:hover
+            background: $primary-color
+        &.active
+            opacity: 1
+            visibility: visible
+        i
+            position: relative
+            color: white
+    &.active-scroll
+        overflow-y: hidden
+
+
+
+.container
+    width: 100%
+    margin: auto
+    padding: 20px 40px
+// ============== NAV ================
+@import nav
+
+// ============== HEADER ================
+.header
+    position: relative
+    width: 100%
+    height: 100%
+    min-height: 40rem
+    background: linear-gradient($primary-gradient-color, $primary-gradient-color), url(../img/fondos/inicio.jpg)
+    background-position: right
+    background-size: cover
+    #svg
+        position: absolute
+        bottom: 0
+    .info
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 100%
+        padding: 10px 30px
+        text-align: center
+        .info-1
+            padding: 0 20px
+            position: relative
+            text-transform: uppercase
+            color: $secondary-color
+            font-family: $font-raleway
+            font-weight: 500
+            margin-bottom: 20px
+            font-size: 1.375em
+        div
+            position: relative
+            display: flex
+            align-items: center
+            text-align: center
+            justify-content: center
+            h1
+                position: relative
+                color: white
+                font-family: $font-poppins
+                font-weight: 700
+                font-size: 1.875em
+                transition: all 0.3s ease
+                background: transparent
+            .line-vertical
+                width: 1.5px
+                height: 30px
+                background-color: white
+                margin-left: 5px
+                animation: line 500ms linear infinite
+                @keyframes line
+                    0%
+                        opacity: 1
+                    50%
+                        opacity: 0
+                    100%
+                        opacity: 1
+        .information
+            position: relative
+            font-family: $font-raleway
+            font-size: 1em
+            color: white
+            margin-top: 30px
+            margin-bottom: 70px
+        .info-buttons
+            position: relative
+            .btn-serv
+                display: block
+                width: 100%
+                color: white
+                text-decoration: none
+                font-size: 1.250em
+                padding: 12px
+                font-family: $font-raleway
+                border-radius: 50px
+                font-weight: 600
+                background-color: $secondary-color
+                border: 1px solid $secondary-color
+                transition: all 0.3s ease
+                &:hover
+                    transform: scale(1.05)
+                    background: white
+                    color: $secondary-color
+            .btn-cono
+                display: none
+
+// ============== SOBRE MI ================
+@keyframes giro
+    0%
+        transform: rotate(45deg)
+    100%
+        transform: rotate(315deg)  
+.sobre-mi
+    position: relative
+    width: 100%
+    .circle-1,
+    .circle-2,
+    .circle-3
+        display: none
+    .container
+        .title
+            width: 100%
+            padding: 0 0 10px
+            display: flex
+            justify-content: center
+            align-items: center
+            h2
+                padding: 0 30px 
+                font-weight: 700
+                text-align: center
+                font-size: 1.875em
+                font-family: $font-poppins
+                color: $font-color-2
+            .rombo-1
+                width: 14px
+                height: 14px
+                background: white
+                border: 3px solid $secondary-color
+                animation: giro 4s linear infinite
+        .line
+            margin: 0px 0px 10px
+            position: relative 
+            width: 100%
+            hr
+                width: 70px
+                height: 3px
+                background-color: $secondary-color
+                margin: auto
+                border: none
+            .square
+                position: absolute
+                width: 12px
+                height: 12px
+                bottom: -200% 
+                left: 50%
+                transform: translateX(-50%)
+                background: white
+                border: 3px solid $secondary-color
+                &::before
+                    content: ""
+                    position: absolute
+                    top: -5px
+                    left: -40px
+                    width: 9px
+                    height: 9px
+                    border-radius: 50px
+                    background: white
+                    border: 3px solid $secondary-color
+                &::after
+                    content: ""
+                    position: absolute
+                    top: -5px
+                    right: -40px
+                    width: 9px
+                    height: 9px
+                    border-radius: 50px
+                    background: white
+                    border: 3px solid $secondary-color
+        .row
+            width: 100%
+            margin-top: 50px
+            display: grid
+            grid-gap: 20px
+            grid-template:
+                columns: repeat(2, 1fr)
+                rows: repeat(2, auto)
+            grid-template-areas: "img-mi img-mi" "info-mis info-mis"
+            
+            .circle-img
+                grid-area: img-mi
+                width: 100%
+            .info-mi
+                grid-area: info-mis
+                width: 100%
+                h3
+                    font-family: $font-raleway
+                    color: $primary-color
+                    font-size: 1.563em
+                    font-weight: 800
+                    margin-bottom: 20px
+                    text-align: center
+                p
+                    font-family: $font-raleway
+                    color: $font-text-color
+                    font-size: 1em
+                    font-weight: 500
+                    text-align: justify
+                    &:not(:last-child)
+                        margin-top: 30px
+                .buttons
+                    margin-top: 30px
+                    .btn
+                        position: relative
+                        display: block
+                        text-align: center
+                        padding: 13px
+                        font-family: $font-raleway
+                        text-decoration: none
+                        color: white
+                        font-size: 1.250em  
+                        border-radius: 50px
+                        transition: all 0.3s ease
+                        font-weight: 600
+                        box-shadow: 0px 10px 8px 0px  rgba(0,0,0,0.1)
+                        &.btn-conoceme
+                            background: $secondary-color
+                            margin-bottom: 20px
+                            border: 1px solid $secondary-color
+                            &:hover
+                                background: white
+                                box-shadow: 0px 10px 8px 0px rgba(254, 194, 0, 0.3)
+                                color: $secondary-color
+                        &.btn-cv
+                            background: $primary-color
+                            border: 1px solid $primary-color
+                            &:hover
+                                background: white
+                                color: $primary-color
+                                box-shadow: 0px 10px 8px 0px rgba(31, 67, 99, 0.3)
+// ============== QUE ES LO QUE HAGO ================
+.services
+    position: relative
+    margin-top: 60px
+    width: 100%
+    .circle-1,
+    .circle-2
+        display: none
+    .container
+        .title
+            @include title
+        .title-2
+            display: none
+        .line
+            @include line
+
+        .box-services
+            margin-top: 30px 
+            justify-content: center
+            width: 100%
+            display: grid
+            grid-gap: 30px
+            grid-template: 
+                columns: repeat(6, 1fr)
+                rows: repeat(6, 1fr)
+            grid-template-areas: "s1 s1 s1 s1 s1 s1" "s2 s2 s2 s2 s2 s2" "s3 s3 s3 s3 s3 s3" "s4 s4 s4 s4 s4 s4" "s5 s5 s5 s5 s5 s5" "s6 s6 s6 s6 s6 s6"
+            .box-1
+                grid-area: s1
+            .box-2
+                grid-area: s2
+            .box-3
+                grid-area: s3
+            .box-4
+                grid-area: s4
+            .box-5
+                grid-area: s5
+            .box-6
+                grid-area: s6
+            .box
+                margin: auto
+                padding: 20px
+                border-radius: 10px
+                width: 300px
+                height: auto
+                box-shadow: 3px 0px 23px 1px rgba(49, 49, 49, 0.2)
+                text-align: center
+                font-family: $font-raleway
+                transition: all 0.3s ease
+                &:hover
+                    background: $secondary-color
+                    box-shadow: 3px 0px 23px 1px rgba(254, 194, 0, 0.3)
+                &:hover .img-serv svg path,
+                &:hover .img-serv svg rect,
+                &:hover .img-serv svg circle    
+                    fill: white !important
+                &:hover .tittle-serv h4,
+                &:hover .content-serv p
+                    color: white !important  
+                .img-serv
+                    width: 100%
+                    padding: 20px
+                    svg 
+                        width: 80px
+                        height: auto
+                        path,
+                        rect,
+                        circle
+                            fill: #6E6E6E !important
+                            
+                .tittle-serv
+                    padding: 10px 0
+                    h4
+                        font-weight: 600
+                        font-size: 1.438em
+                        color: $secondary-color
+                .content-serv
+                    p
+                        color: $font-color-2
+                        font-size: 1em
+        .buttons
+            margin-top: 30px
+            .btn
+                position: relative
+                display: block
+                text-align: center
+                padding: 13px
+                font-family: $font-raleway
+                text-decoration: none
+                color: white
+                font-size: 1.250em
+                border-radius: 50px
+                transition: all 0.3s ease
+                font-weight: 600
+                box-shadow: 0px 10px 8px 0px  rgba(0,0,0,0.1)
+                border: 1px solid $secondary-color
+                &.btn-servicios
+                    background: $secondary-color
+                    margin-bottom: 10px
+                    &:hover
+                        transform: scale(1.05)
+                        background: white
+                        color: $secondary-color
+                        box-shadow: 0px 10px 8px 0px rgba(254, 194, 0, 0.3)
+// ============== PORTAFOLIO ================
+.portfolio
+    position: relative
+    margin-top: 60px
+    width: 100vw
+    background: $primary-color
+    background-repeat: no-repeat
+    height: auto
+    padding: 80px 0
+    .circle-1,
+    .circle-2,
+    .square-1,
+    .square-2,
+    object
+        display: none
+    .ola-1
+        position: absolute
+        transform: rotate(180deg)
+        top: -1px
+    .ola-2
+        position: absolute
+        bottom: -1px
+    .container
+        .title
+            width: 100%
+            padding: 0 0 10px
+            display: flex
+            justify-content: center
+            align-items: center
+            h2
+                padding: 0px 20px 
+                font-weight: 700
+                text-align: center
+                font-size: 1.875em
+                font-family: $font-poppins
+                color: white
+            .rombo-1
+                width: 14px
+                height: 14px
+                background: white
+                border: 3px solid $secondary-color
+                animation: giro 4s linear infinite 
+        .line
+            @include line
+            margin-bottom: 0px
+        p
+            font-size: 1em
+            font-family: $font-raleway
+            color: white
+            text-align: center
+        .buttons
+            margin-top: 30px
+            .btn
+                position: relative
+                display: block
+                text-align: center
+                padding: 13px
+                font-family: $font-raleway
+                text-decoration: none
+                color: white
+                font-size: 1.250em
+                border-radius: 50px
+                transition: all 0.3s ease
+                font-weight: 600
+                box-shadow: 0px 10px 8px 0px  rgba(0,0,0,0.1)
+                border: 1px solid $secondary-color
+                &.btn-port
+                    background: $secondary-color
+                    margin-bottom: 10px
+                    &:hover
+                        transform: scale(1.05)
+                        background: white
+                        color: $secondary-color
+                        box-shadow: 0px 10px 8px 0px rgba(254, 194, 0, 0.1)
+    .swiper-container 
+        position: relative
+        width: 100%
+        padding-top: 20px
+        padding-bottom: 50px     
+        .swiper-slide 
+            position: relative
+            background-position: center
+            background-size: cover
+            width: 300px
+            height: 200px
+            border-radius: 5px
+            overflow: hidden       
+            background-size: cover
+            background-position: center 
+             
+            .content-port
+                position: absolute
+                padding: 10px 14px
+                bottom: 0
+                left: 0
+                width: 100%
+                background: $secondary-gradient-color
+                font-family: $font-raleway
+                color: white
+                h5
+                    font-size: 1.125em
+                p
+                    font-size: 0.875em
+        .swiper-pagination-bullet-active
+            background: $secondary-color !important
+
+// ============== BLOG ================
+.blog
+    position: relative
+    width: 100%
+    .container
+        .title
+            @include title
+            
+        .line
+            @include line
+    .owl-carousel
+        .owl-nav
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            width: 100%
+            .owl-prev
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                left: 3%
+                font-size: 50px
+                color: $secondary-color
+                outline: none
+                transition: all 0.3s ease
+                &:hover
+                    color: rgb(230, 176, 0)
+            .owl-next
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                right: 3%
+                font-size: 50px
+                color: $secondary-color
+                outline: none
+                transition: all 0.3s ease
+                &:hover
+                    color: rgb(230, 176, 0)
+        .item
+            padding: 20px 0
+            .box
+                position: relative
+                margin: auto
+                border-radius: 10px
+                overflow: hidden
+                width: 100%
+                min-width: 280px
+                max-width: 300px
+                height: 100%
+                box-shadow: 0px 6px 20px 1px rgba(30, 67, 99, 0.3)
+                .box-img
+                    position: relative
+                    svg
+                        position: absolute
+                        bottom: -1px
+                .box-content
+                    position: relative
+                    width: 100%
+                    height: 200px
+                    padding: 10px 20px 20px
+                    .date-name
+                        width: 100%
+                        display: flex
+                        justify-content: space-between
+                        font-family: $font-poppins
+                        span
+                            font-size: 0.750em
+                            color: $secondary-color
+                    .title-blog
+                        margin: 10px 0
+                        width: 100%
+                        h4     
+                            font-size: 1.250em
+                            font-family: $font-poppins
+                            line-height: 25px
+                            text-align: left
+                            a
+                                text-decoration: none
+                                color: $primary-color
+                                transition: all 0.3s ease
+                                &:hover
+                                    color: $secondary-color
+                                    text-shadow: 0px 1px 2px rgba(0,0,0,0.2)
+                    .text-blog
+                        width: 100%
+                        p
+                            font-family: $font-raleway
+                            text-align: justify
+                            font-size: 0.875em
+                            text-overflow: ellipsis
+    .container
+        .buttons
+            margin-top: 0px
+            .btn
+                position: relative
+                display: block
+                text-align: center
+                padding: 13px
+                font-family: $font-raleway
+                text-decoration: none
+                color: white
+                font-size: 1.250em
+                border-radius: 50px
+                transition: all 0.3s ease
+                font-weight: 600
+                box-shadow: 0px 10px 8px 0px  rgba(0,0,0,0.1)
+                border: 1px solid $secondary-color
+                &.btn-blog
+                    background: $secondary-color
+                    margin-bottom: 10px
+                    &:hover
+                        transform: scale(1.05)
+                        background: white
+                        color: $secondary-color
+                        box-shadow: 0px 10px 8px 0px rgba(254, 194, 0, 0.3)
+// ============= SUSCRIPCION A NEWSLLTTER ================
+
+.suscribete
+    position: relative
+    background: $primary-color
+    padding: 20px 0
+    overflow: hidden
+    z-index: 100
+    .circulo-1
+        position: absolute
+        top: 5%
+        left: -70px
+        border: 20px solid rgba(255,255,255,0.1)
+        border-radius: 50%
+        background: transparent
+        width: 120px
+        height: 120px
+    .circulo-2
+        position: absolute
+        bottom: 5%
+        right: -75px
+        border: 20px solid rgba(255,255,255,0.1)
+        border-radius: 50%
+        background: transparent
+        width: 100px
+        height: 100px
+        z-index: 200
+    .square-1
+        position: absolute
+        width: 100px
+        height: 100px
+        bottom: -1%
+        left: -80px
+        background: transparent
+        border: 15px solid $secondary-color
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3)
+        animation: square-anim 20s linear infinite
+    .square-2
+        position: absolute
+        width: 100px
+        height: 100px
+        top: -1%
+        right: -80px
+        background: transparent
+        border: 15px solid $secondary-color
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3)
+        animation: square-anim 20s linear infinite
+        @keyframes square-anim
+            0%
+                transform: rotate(0deg)
+            100%
+                transform: rotate(360deg)
+                
+    .container
+        z-index: 300
+        .title
+            width: 100%
+            padding: 0 0 10px
+            display: flex
+            justify-content: center
+            align-items: center
+            h2
+                padding: 0px 
+                font-weight: 700
+                text-align: center
+                font-size: 1.55em
+                font-family: $font-poppins
+                color: white
+        p
+            font-size: 1em
+            font-family: $font-raleway
+            text-align: center
+            color: rgba(255,255,255,0.8)
+        .formulario
+            width: 100%
+            padding: 20px 0
+            form
+                .form-group
+                    width: 100%
+                    .input-box
+                        font-family: $font-raleway
+                        width: 100%
+                        display: block
+                        margin-bottom: 20px
+                        padding: 14px 24px
+                        border: none
+                        border-radius: 50px
+                        background: rgba(255, 255, 255, 0.7)
+                        color: $primary-color
+                        font-weight: 500
+                        outline: none
+                        font-size: 1em
+                    .input-submit
+                        font-family: $font-raleway
+                        width: 100%
+                        display: block
+                        background: $secondary-color
+                        padding: 12px
+                        font-size: 1.125em
+                        font-weight: 600
+                        transition: all 0.3s ease
+                        border: none
+                        border-radius: 50px
+                        color: white
+                        outline: none
+                        cursor: pointer
+                        border: 1px solid $secondary-color
+                        &:hover
+                            transform: scale(1.05)
+                            background: white
+                            color: $secondary-color
+                            box-shadow: 0px 10px 8px 0px rgba(254, 194, 0, 0.1)
+                            
+// ================ CONTACTO ========================
+.contacto
+    padding: 30px 0
+    position: relative
+    width: 100%
+    .container
+        position: relative
+        .circle-1
+            display: none
+        &::before
+            content: ""
+            position: absolute
+            width: 90%
+            margin: auto
+            height: 80%
+            border: 4px solid $primary-color
+            top: 8%
+            left: 50%
+            transform: translateX(-50%)
+            z-index: -1
+            box-shadow: 0px 2px 10px -4px rgba(30, 67, 99, 0.5)
+        .title
+            @include title
+            width: 80%
+            margin: auto
+            background: white
+        p
+            font-size: 1em
+            font-family: $font-raleway
+            text-align: center
+        .formulario
+            padding: 15px 0
+            .form-input
+                display: grid
+                grid-gap: 15px
+                grid-template: 
+                    columns: repeat(3, 1fr)
+                    rows: repeat(4, auto)
+                grid-template-areas: "f1 f1 f1" "f2 f2 f2" "f3 f3 f3" "f4 f4 f4"
+                .f1
+                    grid-area: f1
+                .f2
+                    grid-area: f2
+                .f3
+                    grid-area: f3
+                .f4
+                    grid-area: f4
+                .input-group
+                    position: relative
+                    width: 100%               
+                    .line-input
+                        position: absolute
+                        transition: all 0.3s ease
+                        width: 0%
+                        height: 2px
+                        background: $primary-color
+                    .input-box
+                        position: relative
+                        width: 100%
+                        padding: 15px 20px
+                        background: rgba(110, 110, 110, 0.1)
+                        border: none
+                        font-family: $font-raleway
+                        font-weight: 600
+                        outline: none
+                        font-size: 1em
+                        &:focus ~ .line-input
+                            width: 100%
+                            //border: 1px solid $secondary-color
+                    .input-mensaje
+                        width: 100%
+                        background: rgba(110, 110, 110, 0.1)
+                        border: none
+                        padding: 15px 20px
+                        font-family: $font-raleway
+                        font-weight: 600
+                        font-size: 1em
+                        resize: none
+                        outline: none
+                        margin-bottom: -8px
+                        
+                        &:focus ~ .line-input
+                            width: 100%  
+            .btn-submit
+                display: block
+                position: relative
+                width: 45%
+                margin: auto
+                margin-top: 20px
+                height: 48px
+                background: white
+                top: 0px
+                input[type*="submit"]
+                    position: absolute
+                    left: 50%
+                    transform: translateX(-50%)
+                    font-family: $font-raleway
+                    font-size: 1.125em
+                    font-weight: 600
+                    color: white
+                    background: $secondary-color
+                    border: none
+                    transition: all 0.3s ease
+                    border-radius: 50px
+                    padding: 12px
+                    width: 100%
+                    max-width: 150px
+                    margin: auto
+                    outline: none
+                    box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.1)
+                    outline: none
+                    cursor: pointer
+                    border: 1px solid $secondary-color
+                    &:hover     
+                        background: white
+                        color: $secondary-color
+                        box-shadow: 0px 10px 8px 0px rgba(254, 194, 0, 0.3)
+// =================== FOOTER ========================
+.footer
+    width: 100%
+    padding: 60px 0px 0px 0px
+    position: relative
+    font-family: $font-raleway
+    background: $primary-color
+    svg
+        position: absolute
+        transform: rotate(180deg)
+        top: -1px
+    .list-nav
+        position: relative
+        ul
+            list-style: none
+            li
+                position: relative
+                width: 100%
+                padding: 5px 0
+                a
+                    position: relative
+                    text-decoration: none
+                    color: rgba(255,255,255,0.8)
+                    font-size: 1.250em
+                    transition: all 0.3s ease
+                    font-weight: 600
+                    &:hover
+                        color: white
+            .list-nav-active 
+                a
+                    color: $secondary-color
+                    display: flex
+                    align-items: center
+                    &:hover
+                        color: $secondary-color
+                    .square-3
+                        margin-right: 10px
+                        width: 12px
+                        height: 12px 
+                        border: 3px solid $secondary-color
+                        animation: square-footer 6s linear infinite
+                        @keyframes square-footer
+                            0%
+                                transform: rotate(0deg)
+                            100%
+                                transform: rotate(360deg)
+    .list-red
+        position: relative
+        display: flex
+        justify-content: center
+        a
+            color: white
+            font-size: 1.500em
+            margin: 10px 15px
+            transition: all 0.3s ease
+            &:hover
+                color: $secondary-color
+    hr
+        border: none
+        background-color: white
+        height: 1px
+        margin: 10px 0 0px
+    .line-fin
+        position: relative
+        width: 100%
+        text-align: center
+        padding: 0px 0px 16px
+        p
+            font-size: 1em
+            font-weight: 300
+            color: white
+                    
+@import components/queries
