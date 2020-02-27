@@ -197,7 +197,8 @@ body {
     font-weight: 500; } }
 @media (min-width: 992px) {
   .nav .container-nav {
-    width: 100%; }
+    width: 100%;
+    padding: 20px 20px; }
     .nav .container-nav .logo {
       width: 30%; }
     .nav .container-nav .list-menu {
@@ -295,7 +296,7 @@ body {
     justify-content: center;
     align-items: center; }
     .servicios .container .title h2 {
-      padding: 0;
+      padding: 0 30px;
       font-weight: 700;
       text-align: center;
       font-size: 1.875em;
@@ -346,6 +347,130 @@ body {
         border-radius: 50px;
         background: white;
         border: 3px solid #fec200; }
+  .servicios .container .description {
+    position: relative;
+    width: 100%;
+    padding: 20px 0; }
+    .servicios .container .description p {
+      font-family: "Raleway", sans-serif;
+      font-size: 1em;
+      text-align: center; }
+
+.servicios-web .container .row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas: "serv-img-1" "serv-cont-1" "serv-img-2" "serv-cont-2" "serv-img-3" "serv-cont-3";
+  margin-bottom: 30px; }
+  .servicios-web .container .row .serv-img-1 {
+    grid-area: serv-img-1; }
+  .servicios-web .container .row .serv-img-2 {
+    grid-area: serv-img-2; }
+  .servicios-web .container .row .serv-img-3 {
+    grid-area: serv-img-3; }
+  .servicios-web .container .row .serv-cont-1 {
+    grid-area: serv-cont-1; }
+  .servicios-web .container .row .serv-cont-2 {
+    grid-area: serv-cont-2; }
+  .servicios-web .container .row .serv-cont-3 {
+    grid-area: serv-cont-3; }
+  .servicios-web .container .row .img-serv {
+    position: relative; }
+    .servicios-web .container .row .img-serv img {
+      width: 100%; }
+  .servicios-web .container .row .content-serv {
+    font-family: "Raleway", sans-serif; }
+    .servicios-web .container .row .content-serv h2 {
+      font-weight: 800;
+      color: #1f4363;
+      margin-bottom: 20px; }
+    .servicios-web .container .row .content-serv p {
+      font-size: 1em;
+      color: #1f4363;
+      margin-bottom: 20px;
+      text-align: justify; }
+    .servicios-web .container .row .content-serv ul {
+      position: relative; }
+      .servicios-web .container .row .content-serv ul li {
+        position: relative;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+        color: #1f4363; }
+        .servicios-web .container .row .content-serv ul li img {
+          width: 16px;
+          margin-right: 5px; }
+
+.footer {
+  width: 100%;
+  padding: 60px 0px 0px 0px;
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  background: #1f4363; }
+  .footer svg {
+    position: absolute;
+    transform: rotate(180deg);
+    top: -1px; }
+  .footer .list-nav {
+    position: relative; }
+    .footer .list-nav ul {
+      list-style: none; }
+      .footer .list-nav ul li {
+        position: relative;
+        width: 100%;
+        padding: 5px 0; }
+        .footer .list-nav ul li a {
+          position: relative;
+          text-decoration: none;
+          color: rgba(255, 255, 255, 0.8);
+          font-size: 1.25em;
+          transition: all 0.3s ease;
+          font-weight: 600; }
+          .footer .list-nav ul li a:hover {
+            color: white; }
+      .footer .list-nav ul .list-nav-active a {
+        color: #fec200;
+        display: flex;
+        align-items: center; }
+        .footer .list-nav ul .list-nav-active a:hover {
+          color: #fec200; }
+        .footer .list-nav ul .list-nav-active a .square-3 {
+          margin-right: 10px;
+          width: 12px;
+          height: 12px;
+          border: 3px solid #fec200;
+          animation: square-footer 6s linear infinite; }
+@keyframes square-footer {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+  .footer .list-red {
+    position: relative;
+    display: flex;
+    justify-content: center; }
+    .footer .list-red a {
+      color: white;
+      font-size: 1.5em;
+      margin: 10px 15px;
+      transition: all 0.3s ease; }
+      .footer .list-red a:hover {
+        color: #fec200; }
+  .footer hr {
+    border: none;
+    background-color: white;
+    height: 1px;
+    margin: 10px 0 0px; }
+  .footer .line-fin {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 0px 0px 16px; }
+    .footer .line-fin p {
+      font-size: 1em;
+      font-weight: 300;
+      color: white; }
 
 @media (min-width: 576px) {
   .header .info .info-1 {
@@ -521,6 +646,9 @@ body {
   .header-servicios .container .title-and-subtitle h1 {
     font-size: 2.5em; }
   .header-servicios .container .title-and-subtitle p {
+    font-size: 1.125em; }
+
+  .servicios .container .description p {
     font-size: 1.125em; } }
 @media (min-width: 768px) {
   .header #svg {
@@ -633,7 +761,12 @@ body {
   .servicios .container .title {
     padding: 10px 0; }
     .servicios .container .title h2 {
-      font-size: 2em; } }
+      font-size: 2em; }
+
+  .servicios-web .container .row .img-serv {
+    text-align: center; }
+    .servicios-web .container .row .img-serv img {
+      width: 80%; } }
 @media (min-width: 992px) {
   .header {
     background: url(../img/fondos/inicio.svg);
@@ -779,7 +912,20 @@ body {
     background-position: center;
     background-size: cover;
     min-height: 35rem;
-    height: 100%; } }
+    height: 100%; }
+
+  .servicios-web .container .row {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "serv-img-1 serv-cont-1" " serv-cont-2 serv-img-2" "serv-img-3 serv-cont-3"; }
+    .servicios-web .container .row .img-serv {
+      display: flex;
+      align-items: center; }
+      .servicios-web .container .row .img-serv img {
+        width: 100%; }
+    .servicios-web .container .row .content-serv {
+      padding: 30px 20px; }
+      .servicios-web .container .row .content-serv h2 {
+        font-size: 2em; } }
 @media (min-width: 1200px) {
   body {
     overflow-x: hidden; }
@@ -1147,7 +1293,24 @@ body {
         font-size: 3.5em; }
 
   .servicios .container .title h2 {
-    font-size: 2.5em; } }
+    font-size: 2.5em; }
+  .servicios .container .description {
+    width: 70%;
+    margin: auto; }
+
+  .servicios-web .container .row {
+    margin-bottom: 50px; }
+    .servicios-web .container .row .content-serv {
+      padding: 30px 20px; }
+      .servicios-web .container .row .content-serv h2 {
+        font-size: 2.4em; }
+      .servicios-web .container .row .content-serv p {
+        font-size: 1.125em;
+        margin-bottom: 30px; }
+      .servicios-web .container .row .content-serv ul li {
+        font-size: 1.125em; }
+        .servicios-web .container .row .content-serv ul li img {
+          margin-right: 15px; } }
 @media (min-width: 1367px) {
   .container {
     max-width: 1200px; }

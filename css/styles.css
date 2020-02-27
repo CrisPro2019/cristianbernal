@@ -197,7 +197,8 @@ body {
     font-weight: 500; } }
 @media (min-width: 992px) {
   .nav .container-nav {
-    width: 100%; }
+    width: 100%;
+    padding: 20px 20px; }
     .nav .container-nav .logo {
       width: 30%; }
     .nav .container-nav .list-menu {
@@ -1404,6 +1405,9 @@ body {
   .header-servicios .container .title-and-subtitle h1 {
     font-size: 2.5em; }
   .header-servicios .container .title-and-subtitle p {
+    font-size: 1.125em; }
+
+  .servicios .container .description p {
     font-size: 1.125em; } }
 @media (min-width: 768px) {
   .header #svg {
@@ -1516,7 +1520,12 @@ body {
   .servicios .container .title {
     padding: 10px 0; }
     .servicios .container .title h2 {
-      font-size: 2em; } }
+      font-size: 2em; }
+
+  .servicios-web .container .row .img-serv {
+    text-align: center; }
+    .servicios-web .container .row .img-serv img {
+      width: 80%; } }
 @media (min-width: 992px) {
   .header {
     background: url(../img/fondos/inicio.svg);
@@ -1662,7 +1671,20 @@ body {
     background-position: center;
     background-size: cover;
     min-height: 35rem;
-    height: 100%; } }
+    height: 100%; }
+
+  .servicios-web .container .row {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "serv-img-1 serv-cont-1" " serv-cont-2 serv-img-2" "serv-img-3 serv-cont-3"; }
+    .servicios-web .container .row .img-serv {
+      display: flex;
+      align-items: center; }
+      .servicios-web .container .row .img-serv img {
+        width: 100%; }
+    .servicios-web .container .row .content-serv {
+      padding: 30px 20px; }
+      .servicios-web .container .row .content-serv h2 {
+        font-size: 2em; } }
 @media (min-width: 1200px) {
   body {
     overflow-x: hidden; }
@@ -2030,7 +2052,24 @@ body {
         font-size: 3.5em; }
 
   .servicios .container .title h2 {
-    font-size: 2.5em; } }
+    font-size: 2.5em; }
+  .servicios .container .description {
+    width: 70%;
+    margin: auto; }
+
+  .servicios-web .container .row {
+    margin-bottom: 50px; }
+    .servicios-web .container .row .content-serv {
+      padding: 30px 20px; }
+      .servicios-web .container .row .content-serv h2 {
+        font-size: 2.4em; }
+      .servicios-web .container .row .content-serv p {
+        font-size: 1.125em;
+        margin-bottom: 30px; }
+      .servicios-web .container .row .content-serv ul li {
+        font-size: 1.125em; }
+        .servicios-web .container .row .content-serv ul li img {
+          margin-right: 15px; } }
 @media (min-width: 1367px) {
   .container {
     max-width: 1200px; }

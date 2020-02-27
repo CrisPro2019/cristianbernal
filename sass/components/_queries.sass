@@ -207,6 +207,11 @@
                     font-size: 2.5em
                 p
                     font-size: 1.125em
+    .servicios
+        .container
+            .description
+                p
+                    font-size: 1.125em
                     
 @media (min-width: 768px)// and (max-width: 991.98px)
     .header
@@ -349,6 +354,14 @@
                 padding: 10px 0    
                 h2
                     font-size: 2em
+    .servicios-web
+        .container
+            .row
+                .img-serv
+                    text-align: center
+                    img
+                        width: 80%
+
 @media (min-width: 992px)
     .header
         background: url(../img/fondos/inicio.svg)
@@ -520,6 +533,21 @@
         background-size: cover
         min-height: 35rem
         height: 100%
+    .servicios-web
+        .container
+            .row
+                grid-template-columns: repeat(2, 1fr)
+                grid-template-areas: "serv-img-1 serv-cont-1" " serv-cont-2 serv-img-2" "serv-img-3 serv-cont-3" 
+                .img-serv
+                    display: flex
+                    align-items: center
+                    img
+                        width: 100%
+                .content-serv
+                    padding: 30px 20px
+                    h2
+                        font-size: 2em
+
 @media (min-width: 1200px)
     body
         overflow-x: hidden
@@ -913,6 +941,26 @@
             .title
                 h2
                     font-size: 2.5em
+            .description
+                width: 70%
+                margin: auto
+    .servicios-web
+        .container
+            .row
+                margin-bottom: 50px
+                .content-serv
+                    padding: 30px 20px
+                    h2
+                        font-size: 2.4em
+                    p
+                        font-size: 1.125em
+                        margin-bottom: 30px
+                    ul
+                        li
+                            font-size: 1.125em
+                            img
+                                margin-right: 15px
+
 @media (min-width: 1367px)
     .container
         max-width: 1200px
@@ -928,7 +976,6 @@
         min-height: 38rem
         .container
             min-height: 38rem
-
 
 @media (min-width: 1400px)
     .header
