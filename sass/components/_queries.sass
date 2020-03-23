@@ -225,7 +225,26 @@
                     font-size: 2.5em
                 p
                     font-size: 1.125em
-                    
+    // ================ PORTAFOLIO =================
+    .header-contacto
+        .container
+            .title-and-subtitle
+                h1
+                    font-size: 2.5em
+                p
+                    font-size: 1.125em
+    // ================ CONTACTO ==================
+    .contacto-formulario
+        .container
+            .img-and-formulario
+                .formulario
+                    padding: 15px 10%
+                    form 
+                        .btn-submit
+                            input[type*="submit"]
+                                width: auto
+                                padding: 18px 32px
+
 @media (min-width: 768px)// and (max-width: 991.98px)
     .header
         #svg
@@ -604,6 +623,28 @@
             p
                 font-size: 1em
                 text-align: center
+    // ================ CONTACTO =================
+    .header-contacto
+        background: url(../img/fondos/mi-portafolio.svg)
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        min-height: 35rem
+        height: 100%
+        .container
+            min-height: 23rem
+    .contacto-formulario
+        .container
+            .img-and-formulario
+                grid-template-areas: "img-form form-contact"
+                .img
+                    img
+                        max-width: 400px
+                .formulario
+                    form
+                        .btn-submit
+                            input[type*="submit"]
+                                margin-left: initial
 
 @media (min-width: 1200px)
     body
@@ -1069,6 +1110,60 @@
                     margin-top: 30px
                     width: 100%
                     max-width: 350px
+    // ================ CONTACTO =================
+    .header-contacto
+        min-height: 35rem
+        .container
+            min-height: 25rem
+            .title-and-subtitle
+                h1
+                    font-size: 3.5em
+    .contacto-formulario
+        .circle-1
+            display: block
+            position: absolute
+            top: -33%
+            left: -280px
+            width: 350px
+            height: 350px
+            border-radius: 50%
+            background: $secondary-gradient-color-2
+            box-shadow: 0px 11px 40px -5px $secondary-color
+        .circle-2
+            position: absolute
+            top: -15%
+            left: 100px
+            width: 50px
+            height: 50px
+            display: block
+            border-radius: 50%
+            background: $primary-color
+            box-shadow: 0px 6px 30px -5px $primary-gradient-color
+        .circle-3
+            position: absolute
+            top: 85%
+            transform: translateY(-50%)
+            right: -95px
+            width: 150px
+            height: 150px
+            display: block
+            border-radius: 50%
+            background: $secondary-gradient-color-2
+            box-shadow: 0px 11px 40px -5px $secondary-color
+        .container
+            .img
+                display: flex
+                justify-content: center
+                align-items: center
+                margin-bottom: 0px !important
+            .formulario
+                padding: 15px 2% !important
+                form
+                    .form-input
+                        grid-template: 
+                            columns: repeat(2, 1fr)
+                            rows: repeat(3, auto)
+                        grid-template-areas: "f1 f2" "f3 f3" "f4 f4" !important
 
 @media (min-width: 1367px)
     .container
@@ -1082,7 +1177,8 @@
             align-items: center
     .header-sobre-mi,
     .header-servicios,
-    .header-portafolio
+    .header-portafolio,
+    .header-contacto
         min-height: 38rem
         .container
             min-height: 30rem
@@ -1112,6 +1208,11 @@
     // ================ SERVICIOS =================
     .header-portafolio
         background: url(../img/fondos/1400/mi-portafoliobig.svg)
+        background-repeat: no-repeat
+        min-height: 54rem
+    // ================ CONTACTO =================
+    .header-portafolio
+        background: url(../img/fondos/1400/contactobig.svg)
         background-repeat: no-repeat
         min-height: 54rem
    

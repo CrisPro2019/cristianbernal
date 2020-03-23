@@ -1,0 +1,347 @@
+@import components/variables
+@import components/mixins
+@import components/fonts
+
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body::-webkit-scrollbar
+    width: 8px
+    height: 8px
+    background: rgba(31, 67, 99, 0.2)
+
+body::-webkit-scrollbar-thumb
+    background: rgb(254, 194, 0.8)
+    border-radius: 4px
+    &:hover
+        background: rgb(254, 194, 0.8)
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1)
+
+body
+    position: relative
+    .scroll-down
+        position: fixed
+        bottom: 20px
+        right: 20px
+        width: 50px
+        height: 50px
+        background: $secondary-color
+        border-radius: 10px
+        box-shadow: 0px 11px 30px -5px $secondary-color
+        z-index: 2000
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all 0.3s ease
+        opacity: 0
+        visibility: hidden
+        cursor: pointer
+        &:hover
+            background: $primary-color
+        &.active
+            opacity: 1
+            visibility: visible
+        i
+            position: relative
+            color: white
+    &.active-scroll
+        overflow-y: hidden
+
+.container
+    width: 100%
+    margin: auto
+    padding: 20px 40px
+
+@import nav
+
+// ============== HEADER ================
+.header 
+    position: relative
+    width: 100%
+    height: 100%
+    min-height: 30rem
+    background: linear-gradient($primary-gradient-color, $primary-gradient-color), url(../img/fondos/contacto.jpg)
+    background-size: cover
+    background-position: center
+    #svg
+        position: absolute
+        bottom: 0
+    .container
+        position: relative
+        min-height: 20rem
+        .title-and-subtitle
+            position: absolute
+            width: 100%
+            top: 50%
+            left: 50%
+            transform: translate(-50%, 50%)
+            text-align: center
+            color: white
+            h1
+                font-family: $font-poppins
+            p
+                font-family: $font-raleway
+                text-transform: uppercase
+
+// ============== TITULO DEL PORTAFOLIO ================
+@keyframes giro
+    0%
+        transform: rotate(45deg)
+    100%
+        transform: rotate(315deg) 
+.servicios
+    position: relative
+    width: 100%
+    object
+        display: none
+    .container
+        .title
+            width: 100%
+            padding: 0 0 10px
+            display: flex
+            justify-content: center
+            align-items: center
+            h2
+                padding: 0 30px
+                font-weight: 700
+                text-align: center
+                font-size: 1.875em
+                font-family: $font-poppins
+                color: $font-color-2
+            .rombo-1
+                animation: giro 4s linear infinite
+        .line
+            margin: 0px 0px 10px
+            position: relative 
+            width: 100%
+            hr
+                width: 70px
+                height: 3px
+                background-color: $secondary-color
+                margin: auto
+                border: none
+            .square
+                position: absolute
+                width: 12px
+                height: 12px
+                bottom: -200% 
+                left: 50%
+                transform: translateX(-50%)
+                background: white
+                border: 3px solid $secondary-color
+                &::before
+                    content: ""
+                    position: absolute
+                    top: -5px
+                    left: -40px
+                    width: 9px
+                    height: 9px
+                    border-radius: 50px
+                    background: white
+                    border: 3px solid $secondary-color
+                &::after
+                    content: ""
+                    position: absolute
+                    top: -5px
+                    right: -40px
+                    width: 9px
+                    height: 9px
+                    border-radius: 50px
+                    background: white
+                    border: 3px solid $secondary-color
+        .description
+            position: relative
+            width: 100%
+            padding: 20px 0
+            p
+                font-family: $font-raleway
+                font-size: 1em
+                text-align: center
+// ============== FORMULARIO DE CONTACTO ================
+.contacto-formulario
+    position: relative
+    width: 100% 
+    .circle-1,         
+    .circle-2,         
+    .circle-3
+        display: none
+    .container
+        position: relative
+        .img-and-formulario
+            display: grid
+            grid-template:
+                columns: repeat(2, 1fr)
+            grid-template-areas: "img-form img-form" "form-contact form-contact"
+            .img
+                grid-area: img-form
+                width: 100%
+                text-align: center
+                margin-bottom: 40px
+                img
+                    width: 100%
+                    max-width: 300px
+            .formulario
+                grid-area: form-contact
+                position: relative
+                form
+                    position: relative
+                    .form-input
+                        display: grid
+                        grid-gap: 15px
+                        grid-template: 
+                            columns: repeat(2, 1fr)
+                            rows: repeat(4, auto)
+                        grid-template-areas: "f1 f1" "f2 f2" "f3 f3" "f4 f4"
+                        .f1
+                            grid-area: f1
+                        .f2
+                            grid-area: f2
+                        .f3
+                            grid-area: f3
+                        .f4
+                            grid-area: f4
+                        .input-group
+                            position: relative
+                            width: 100%               
+                            .line-input
+                                position: absolute
+                                transition: all 0.3s ease
+                                width: 0%
+                                height: 2px
+                                background: $primary-color
+                            .input-box
+                                position: relative
+                                width: 100%
+                                padding: 15px 20px
+                                background: rgba(110, 110, 110, 0.1)
+                                border: none
+                                font-family: $font-raleway
+                                font-weight: 600
+                                outline: none
+                                font-size: 1em
+                                &:focus ~ .line-input
+                                    width: 100%
+                            .input-mensaje
+                                width: 100%
+                                background: rgba(110, 110, 110, 0.1)
+                                border: none
+                                padding: 15px 20px
+                                font-family: $font-raleway
+                                font-weight: 600
+                                font-size: 1em
+                                resize: none
+                                outline: none
+                                margin-bottom: -8px
+                                
+                                &:focus ~ .line-input
+                                    width: 100%  
+                    .btn-submit
+                        display: block
+                        position: relative
+                        width: 100%
+                        margin: auto
+                        margin-top: 20px
+                        height: 48px
+                        background: white
+                        top: 0px
+                        input[type*="submit"]
+                            position: relative
+                            display: block
+                            font-family: $font-raleway
+                            font-size: 1.125em
+                            font-weight: 600
+                            color: white
+                            background: $secondary-color
+                            border: none
+                            transition: all 0.3s ease
+                            border-radius: 50px
+                            padding: 12px
+                            width: 100%
+                            margin: auto
+                            outline: none
+                            box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.1)
+                            outline: none
+                            cursor: pointer
+                            border: 1px solid $secondary-color
+                            transform: scale(1.0)
+                            &:hover     
+                                background: white
+                                color: $secondary-color
+                                box-shadow: 0px 10px 8px 0px rgba(254, 194, 0, 0.3)
+                                transform: scale(1.05)
+
+// =================== FOOTER ========================
+.footer
+    width: 100%
+    padding: 60px 0px 0px 0px
+    position: relative
+    font-family: $font-raleway
+    background: $primary-color
+    svg
+        position: absolute
+        transform: rotate(180deg)
+        top: -1px
+    .list-nav
+        position: relative
+        ul
+            list-style: none
+            li
+                position: relative
+                width: 100%
+                padding: 5px 0
+                a
+                    position: relative
+                    text-decoration: none
+                    color: rgba(255,255,255,0.8)
+                    font-size: 1.250em
+                    transition: all 0.3s ease
+                    font-weight: 600
+                    &:hover
+                        color: white
+            .list-nav-active 
+                a
+                    color: $secondary-color
+                    display: flex
+                    align-items: center
+                    &:hover
+                        color: $secondary-color
+                    .square-3
+                        margin-right: 10px
+                        width: 12px
+                        height: 12px 
+                        border: 3px solid $secondary-color
+                        animation: square-footer 6s linear infinite
+                        @keyframes square-footer
+                            0%
+                                transform: rotate(0deg)
+                            100%
+                                transform: rotate(360deg)
+    .list-red
+        position: relative
+        display: flex
+        justify-content: center
+        a
+            color: white
+            font-size: 1.500em
+            margin: 10px 15px
+            transition: all 0.3s ease
+            &:hover
+                color: $secondary-color
+    hr
+        border: none
+        background-color: white
+        height: 1px
+        margin: 10px 0 0px
+    .line-fin
+        position: relative
+        width: 100%
+        text-align: center
+        padding: 0px 0px 16px
+        p
+            font-size: 1em
+            font-weight: 300
+            color: white
+@import components/queries
