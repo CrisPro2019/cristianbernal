@@ -1,0 +1,307 @@
+@import components/variables
+@import components/mixins
+@import components/fonts
+
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body::-webkit-scrollbar
+    width: 8px
+    height: 8px
+    background: rgba(31, 67, 99, 0.2)
+
+body::-webkit-scrollbar-thumb
+    background: rgb(254, 194, 0.8)
+    border-radius: 4px
+    &:hover
+        background: rgb(254, 194, 0.8)
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1)
+
+body
+    position: relative
+    .scroll-down
+        position: fixed
+        bottom: 20px
+        right: 20px
+        width: 50px
+        height: 50px
+        background: $secondary-color
+        border-radius: 10px
+        box-shadow: 0px 11px 30px -5px $secondary-color
+        z-index: 2000
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all 0.3s ease
+        opacity: 0
+        visibility: hidden
+        cursor: pointer
+        &:hover
+            background: $primary-color
+        &.active
+            opacity: 1
+            visibility: visible
+        i
+            position: relative
+            color: white
+    &.active-scroll
+        overflow-y: hidden
+
+.container
+    width: 100%
+    margin: auto
+    padding: 20px 40px
+
+@import nav
+
+// ============= SUSCRIPCION A NEWSLLTTER ================
+
+.suscribete
+    position: relative
+    background: $primary-color
+    padding: 20px 0
+    overflow: hidden
+    z-index: 100
+    .circulo-1
+        position: absolute
+        top: 5%
+        left: -70px
+        border: 20px solid rgba(255,255,255,0.1)
+        border-radius: 50%
+        background: transparent
+        width: 120px
+        height: 120px
+    .circulo-2
+        position: absolute
+        bottom: 5%
+        right: -75px
+        border: 20px solid rgba(255,255,255,0.1)
+        border-radius: 50%
+        background: transparent
+        width: 100px
+        height: 100px
+        z-index: 200
+    .square-1
+        position: absolute
+        width: 100px
+        height: 100px
+        bottom: -1%
+        left: -80px
+        background: transparent
+        border: 15px solid $secondary-color
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3)
+        animation: square-anim 20s linear infinite
+    .square-2
+        position: absolute
+        width: 100px
+        height: 100px
+        top: -1%
+        right: -80px
+        background: transparent
+        border: 15px solid $secondary-color
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3)
+        animation: square-anim 20s linear infinite
+        @keyframes square-anim
+            0%
+                transform: rotate(0deg)
+            100%
+                transform: rotate(360deg)
+                
+    .container
+        z-index: 300
+        .title
+            width: 100%
+            padding: 0 0 10px
+            display: flex
+            justify-content: center
+            align-items: center
+            h2
+                padding: 0px 
+                font-weight: 700
+                text-align: center
+                font-size: 1.55em
+                font-family: $font-poppins
+                color: white
+        p
+            font-size: 1em
+            font-family: $font-raleway
+            text-align: center
+            color: rgba(255,255,255,0.8)
+        .formulario
+            width: 100%
+            padding: 20px 0
+            form
+                .form-group
+                    width: 100%
+                    .input-box
+                        font-family: $font-raleway
+                        width: 100%
+                        display: block
+                        margin-bottom: 20px
+                        padding: 14px 24px
+                        border: none
+                        border-radius: 50px
+                        background: rgba(255, 255, 255, 0.7)
+                        color: $primary-color
+                        font-weight: 500
+                        outline: none
+                        font-size: 1em
+                    .input-submit
+                        font-family: $font-raleway
+                        width: 100%
+                        display: block
+                        background: $secondary-color
+                        padding: 12px
+                        font-size: 1.125em
+                        font-weight: 600
+                        transition: all 0.3s ease
+                        border: none
+                        border-radius: 50px
+                        color: white
+                        outline: none
+                        cursor: pointer
+                        border: 1px solid $secondary-color
+                        &:hover
+                            transform: scale(1.05)
+                            background: white
+                            color: $secondary-color
+                            box-shadow: 0px 10px 8px 0px rgba(254, 194, 0, 0.1)
+
+// ============== MENSAJE PARA CONTACTARME ================                   
+.contactarme
+    position: relative
+    .circle-1,         
+    .circle-2,         
+    .circle-3
+        display: none
+    .container     
+        padding-top: 50px    
+        .title
+            width: 100%
+            padding: 0 0 10px
+            h2
+                font-weight: 700
+                text-align: center
+                font-size: 1.625em
+                font-family: $font-poppins
+                color: $font-color-2
+            .title-2
+                display: flex
+                justify-content: center
+                align-items: center
+                h2
+                    padding: 0px 15px 
+                    font-weight: 700
+                    text-align: center
+                    font-size: 1.500em
+                    font-family: $font-poppins
+                    color: $font-color-2
+                .rombo-1
+                    animation: giro 4s linear infinite
+        .line
+            @include line
+            margin-bottom: 20px 
+        p
+            font-family: $font-raleway
+            text-align: justify
+            margin-bottom: 20px
+        .btn 
+            position: relative
+            width: 100%
+            .contact-now
+                position: relative
+                display: block
+                text-align: center
+                padding: 13px
+                font-family: $font-raleway
+                text-decoration: none
+                color: white
+                font-size: 1.250em
+                border-radius: 50px
+                transition: all 0.3s ease
+                font-weight: 600
+                box-shadow: 0px 10px 8px 0px  rgba(0,0,0,0.1)
+                border: 1px solid $secondary-color
+                background: $secondary-color
+                &:hover
+                    transform: scale(1.05)
+                    background: white
+                    color: $secondary-color
+                    box-shadow: 0px 10px 8px 0px rgba(254, 194, 0, 0.3)
+
+// =================== FOOTER ========================
+.footer
+    width: 100%
+    padding: 60px 0px 0px 0px
+    position: relative
+    font-family: $font-raleway
+    background: $primary-color
+    svg
+        position: absolute
+        transform: rotate(180deg)
+        top: -1px
+    .list-nav
+        position: relative
+        ul
+            list-style: none
+            li
+                position: relative
+                width: 100%
+                padding: 5px 0
+                a
+                    position: relative
+                    text-decoration: none
+                    color: rgba(255,255,255,0.8)
+                    font-size: 1.250em
+                    transition: all 0.3s ease
+                    font-weight: 600
+                    &:hover
+                        color: white
+            .list-nav-active 
+                a
+                    color: $secondary-color
+                    display: flex
+                    align-items: center
+                    &:hover
+                        color: $secondary-color
+                    .square-3
+                        margin-right: 10px
+                        width: 12px
+                        height: 12px 
+                        border: 3px solid $secondary-color
+                        animation: square-footer 6s linear infinite
+                        @keyframes square-footer
+                            0%
+                                transform: rotate(0deg)
+                            100%
+                                transform: rotate(360deg)
+    .list-red
+        position: relative
+        display: flex
+        justify-content: center
+        a
+            color: white
+            font-size: 1.500em
+            margin: 10px 15px
+            transition: all 0.3s ease
+            &:hover
+                color: $secondary-color
+    hr
+        border: none
+        background-color: white
+        height: 1px
+        margin: 10px 0 0px
+    .line-fin
+        position: relative
+        width: 100%
+        text-align: center
+        padding: 0px 0px 16px
+        p
+            font-size: 1em
+            font-weight: 300
+            color: white            
+
+@import components/queries    

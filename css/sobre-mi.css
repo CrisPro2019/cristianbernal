@@ -61,6 +61,8 @@ body {
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3); }
   .nav.active-2 {
     background: white; }
+  .nav.nav-blog {
+    background: #1f4363; }
   .nav .container-nav {
     position: relative;
     padding: 12px 14px;
@@ -1270,6 +1272,9 @@ body {
   .mensaje-portafolio .container p {
     font-size: 1em;
     text-align: center; }
+
+  .blog-contacto {
+    padding-top: 50px; }
 
   .header-contacto {
     background: url(../img/fondos/mi-portafolio.svg);

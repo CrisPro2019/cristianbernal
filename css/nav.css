@@ -11,8 +11,8 @@ Error: Undefined variable: "$primary-color".
 9:         box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3)
 10:     &.active-2
 11:         background: white
-12:     .container-nav
-13:         position: relative
+12:     &.nav-blog
+13:         background: $primary-color
 
 Backtrace:
 sass/nav.sass:8
@@ -80,4 +80,4 @@ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/interna
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$primary-color\".\A         on line 8 of sass/nav.sass\A \A 3:     position: fixed\A 4:     width: 100%\A 5:     z-index: 3000\A 6:     transition: all 0.3s ease\A 7:     &.active\A 8:         background: $primary-color\A 9:         box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3)\A 10:     &.active-2\A 11:         background: white\A 12:     .container-nav\A 13:         position: relative"; }
+  content: "Error: Undefined variable: \"$primary-color\".\A         on line 8 of sass/nav.sass\A \A 3:     position: fixed\A 4:     width: 100%\A 5:     z-index: 3000\A 6:     transition: all 0.3s ease\A 7:     &.active\A 8:         background: $primary-color\A 9:         box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3)\A 10:     &.active-2\A 11:         background: white\A 12:     &.nav-blog\A 13:         background: $primary-color"; }
