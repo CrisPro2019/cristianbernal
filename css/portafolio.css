@@ -258,7 +258,7 @@ body {
   width: 100%;
   height: 100%;
   min-height: 30rem;
-  background: linear-gradient(rgba(31, 67, 99, 0.9), rgba(31, 67, 99, 0.9)), url(../img/fondos/sobre-mi.jpg);
+  background: linear-gradient(rgba(31, 67, 99, 0.9), rgba(31, 67, 99, 0.9)), url(../img/fondos/portafolio.jpg);
   background-size: cover;
   background-position: center; }
   .header #svg {
@@ -286,38 +286,37 @@ body {
     transform: rotate(45deg); }
   100% {
     transform: rotate(315deg); } }
-.sobre-mi {
+.servicios {
   position: relative;
   width: 100%; }
-  .sobre-mi .circle-1,
-  .sobre-mi .circle-2 {
+  .servicios object {
     display: none; }
-  .sobre-mi .container .title {
+  .servicios .container .title {
     width: 100%;
     padding: 0 0 10px;
     display: flex;
     justify-content: center;
     align-items: center; }
-    .sobre-mi .container .title h2 {
+    .servicios .container .title h2 {
       padding: 0 30px;
       font-weight: 700;
       text-align: center;
       font-size: 1.875em;
       font-family: "Poppins", sans-serif;
       color: #6e6e6e; }
-    .sobre-mi .container .title .rombo-1 {
+    .servicios .container .title .rombo-1 {
       animation: giro 4s linear infinite; }
-  .sobre-mi .container .line {
+  .servicios .container .line {
     margin: 0px 0px 10px;
     position: relative;
     width: 100%; }
-    .sobre-mi .container .line hr {
+    .servicios .container .line hr {
       width: 70px;
       height: 3px;
       background-color: #fec200;
       margin: auto;
       border: none; }
-    .sobre-mi .container .line .square {
+    .servicios .container .line .square {
       position: absolute;
       width: 12px;
       height: 12px;
@@ -326,7 +325,7 @@ body {
       transform: translateX(-50%);
       background: white;
       border: 3px solid #fec200; }
-      .sobre-mi .container .line .square::before {
+      .servicios .container .line .square::before {
         content: "";
         position: absolute;
         top: -5px;
@@ -336,7 +335,7 @@ body {
         border-radius: 50px;
         background: white;
         border: 3px solid #fec200; }
-      .sobre-mi .container .line .square::after {
+      .servicios .container .line .square::after {
         content: "";
         position: absolute;
         top: -5px;
@@ -346,254 +345,137 @@ body {
         border-radius: 50px;
         background: white;
         border: 3px solid #fec200; }
-  .sobre-mi .container .row {
-    width: 100%;
-    margin-top: 50px;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas: "img-mi img-mi" "info-mis info-mis"; }
-    .sobre-mi .container .row .circle-img {
-      position: relative;
-      grid-area: img-mi;
-      width: 100%; }
-      .sobre-mi .container .row .circle-img .circle-2 {
-        display: none; }
-    .sobre-mi .container .row .info-mi {
-      grid-area: info-mis;
-      width: 100%; }
-      .sobre-mi .container .row .info-mi h3 {
-        font-family: "Raleway", sans-serif;
-        color: #1f4363;
-        font-size: 1.563em;
-        font-weight: 800;
-        margin-bottom: 20px;
-        text-align: center; }
-      .sobre-mi .container .row .info-mi p {
-        font-family: "Raleway", sans-serif;
-        color: #6E6E6E;
-        font-size: 1em;
-        font-weight: 500;
-        text-align: justify; }
-        .sobre-mi .container .row .info-mi p:not(:last-child) {
-          margin-top: 30px; }
-      .sobre-mi .container .row .info-mi .buttons {
-        margin-top: 30px; }
-        .sobre-mi .container .row .info-mi .buttons .btn {
-          position: relative;
-          display: block;
-          text-align: center;
-          padding: 13px;
-          font-family: "Raleway", sans-serif;
-          text-decoration: none;
-          color: white;
-          font-size: 1.25em;
-          border-radius: 50px;
-          transition: all 0.3s ease;
-          font-weight: 600;
-          box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.1); }
-          .sobre-mi .container .row .info-mi .buttons .btn.btn-cv {
-            background: #1f4363;
-            border: 1px solid #1f4363; }
-            .sobre-mi .container .row .info-mi .buttons .btn.btn-cv:hover {
-              background: white;
-              color: #1f4363;
-              box-shadow: 0px 10px 8px 0px rgba(31, 67, 99, 0.3); }
 
-.habilidades {
+.portafolio {
   position: relative;
-  margin-top: 60px;
-  width: 100vw;
-  background: #1f4363;
-  background-repeat: no-repeat;
-  height: auto;
-  padding: 80px 0; }
-  .habilidades .circle-1,
-  .habilidades .circle-2,
-  .habilidades .square-1,
-  .habilidades object {
-    display: none; }
-  .habilidades .ola-1 {
-    position: absolute;
-    transform: rotate(180deg);
-    top: -1px; }
-  .habilidades .ola-2 {
-    position: absolute;
-    bottom: -1px; }
-  .habilidades .container .title {
+  width: 100%; }
+  .portafolio .container .categorias {
+    position: relative;
     width: 100%;
-    padding: 0 0 10px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center; }
-    .habilidades .container .title h2 {
-      padding: 0px 20px;
-      font-weight: 700;
-      text-align: center;
-      font-size: 1.875em;
+    .portafolio .container .categorias a {
       font-family: "Poppins", sans-serif;
-      color: white; }
-    .habilidades .container .title .rombo-1 {
-      animation: giro 4s linear infinite; }
-  .habilidades .container .line {
-    margin: 0px 0px 10px;
+      text-decoration: none;
+      font-weight: 500;
+      color: #6E6E6E;
+      font-size: 1em;
+      padding: 12px 30px;
+      text-align: center;
+      transition: all 0.3s ease; }
+      .portafolio .container .categorias a.activo {
+        background: #ffffff;
+        color: #fec200;
+        border-radius: 30px;
+        -webkit-box-shadow: 4px 7px 11px 0px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 4px 7px 11px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 4px 7px 11px 0px rgba(0, 0, 0, 0.25); }
+        .portafolio .container .categorias a.activo:hover {
+          color: #fec200; }
+      .portafolio .container .categorias a:hover {
+        color: #1f4363; }
+      .portafolio .container .categorias a:active {
+        color: #fec200; }
+  .portafolio .container .grid {
     position: relative;
     width: 100%;
-    margin-bottom: 0px; }
-    .habilidades .container .line hr {
-      width: 70px;
-      height: 3px;
-      background-color: #fec200;
-      margin: auto;
-      border: none; }
-    .habilidades .container .line .square {
+    opacity: 0;
+    transition: opacity 0.5s linear 1s; }
+    .portafolio .container .grid.imagenes-cargadas {
+      opacity: 1; }
+    .portafolio .container .grid .item {
       position: absolute;
-      width: 12px;
-      height: 12px;
-      bottom: -200%;
-      left: 50%;
-      transform: translateX(-50%);
-      background: white;
-      border: 3px solid #fec200; }
-      .habilidades .container .line .square::before {
-        content: "";
-        position: absolute;
-        top: -5px;
-        left: -40px;
-        width: 9px;
-        height: 9px;
-        border-radius: 50px;
-        background: white;
-        border: 3px solid #fec200; }
-      .habilidades .container .line .square::after {
-        content: "";
-        position: absolute;
-        top: -5px;
-        right: -40px;
-        width: 9px;
-        height: 9px;
-        border-radius: 50px;
-        background: white;
-        border: 3px solid #fec200; }
-  .habilidades .container p {
-    font-size: 1em;
-    font-family: "Raleway", sans-serif;
-    color: white;
-    text-align: center; }
-  .habilidades .container .row .col {
-    position: relative; }
-  .habilidades .container .row .skill {
-    position: relative;
-    margin-bottom: 10px; }
-    .habilidades .container .row .skill .habilidad {
-      width: 100%;
-      color: white;
-      font-family: "Raleway", sans-serif; }
-    .habilidades .container .row .skill .bar-progress {
-      position: relative;
-      width: 100%;
-      display: flex;
-      align-items: center; }
-      .habilidades .container .row .skill .bar-progress .percent-and-progress {
+      display: block;
+      padding: 0;
+      margin: 10px;
+      width: calc(100% - 20px); }
+      .portafolio .container .grid .item .item-contenido {
         position: relative;
-        width: 90%;
-        padding-right: 5px; }
-        .habilidades .container .row .skill .bar-progress .percent-and-progress .percent {
+        width: 100%;
+        border-radius: 10px;
+        transition: all 0.3s ease; }
+        .portafolio .container .grid .item .item-contenido:hover {
+          -webkit-box-shadow: 0px 9px 17px 0px rgba(0, 0, 0, 0.15);
+          -moz-box-shadow: 0px 9px 17px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 9px 17px 0px rgba(0, 0, 0, 0.15); }
+        .portafolio .container .grid .item .item-contenido .link {
+          position: absolute;
           width: 100%;
-          height: 8px;
-          border-radius: 50px;
-          background-color: white; }
-          .habilidades .container .row .skill .bar-progress .percent-and-progress .percent .progress {
-            background: #fec200;
-            height: 8px;
-            border-radius: 50px;
-            animation: bar-progress 2s ease-in-out forwards; }
-@keyframes bar-progress {
-  0% {
-    width: 0; } }
-      .habilidades .container .row .skill .bar-progress .value {
-        position: relative;
-        width: 10%; }
-        .habilidades .container .row .skill .bar-progress .value p {
-          font-family: "Poppins", sans-serif; }
+          height: calc(100% - 83px);
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          background: rgba(0, 0, 0, 0.5);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.3s ease;
+          opacity: 0; }
+          .portafolio .container .grid .item .item-contenido .link:hover {
+            opacity: 1; }
+          .portafolio .container .grid .item .item-contenido .link a {
+            position: relative;
+            text-decoration: none;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            color: white;
+            padding: 10px 14px;
+            border-radius: 50%;
+            border: 1px solid white;
+            transition: all 0.3s ease; }
+            .portafolio .container .grid .item .item-contenido .link a:hover {
+              background: white;
+              color: black;
+              -webkit-box-shadow: 0px 9px 17px 0px rgba(0, 0, 0, 0.75);
+              -moz-box-shadow: 0px 9px 17px 0px rgba(0, 0, 0, 0.75);
+              box-shadow: 0px 9px 17px 0px rgba(0, 0, 0, 0.75); }
+        .portafolio .container .grid .item .item-contenido img {
+          width: 100%;
+          height: 100%;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px; }
+        .portafolio .container .grid .item .item-contenido .proyect-info {
+          position: relative;
+          padding: 10px 0;
+          text-align: center;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px; }
+          .portafolio .container .grid .item .item-contenido .proyect-info h4 {
+            font-family: "Raleway", sans-serif;
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 500; }
+          .portafolio .container .grid .item .item-contenido .proyect-info span {
+            display: inline-block;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            color: white;
+            border-radius: 20px;
+            font-size: 12px;
+            padding: 5px 15px; }
+            .portafolio .container .grid .item .item-contenido .proyect-info span.web-corp {
+              background: #148ECC; }
+            .portafolio .container .grid .item .item-contenido .proyect-info span.web-tienda {
+              background: #7619FF; }
+            .portafolio .container .grid .item .item-contenido .proyect-info span.web-blog {
+              background: #FFC300; }
 
-.elegirme .container .title {
-  width: 100%;
-  padding: 0 0 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .elegirme .container .title h2 {
-    padding: 0px 20px;
-    font-weight: 700;
-    text-align: center;
-    font-size: 1.875em;
-    font-family: "Poppins", sans-serif;
-    color: #6e6e6e; }
-  .elegirme .container .title .rombo-1 {
-    animation: giro 4s linear infinite; }
-.elegirme .container .line {
-  margin: 0px 0px 10px;
+.mensaje-portafolio .container .line {
+  margin-bottom: 30px; }
+.mensaje-portafolio .container p {
+  font-size: 1em;
+  text-align: justify;
+  font-family: "Raleway", sans-serif;
+  color: #6E6E6E; }
+.mensaje-portafolio .container .img-mensaje {
   position: relative;
   width: 100%;
-  margin-bottom: 0px; }
-  .elegirme .container .line hr {
-    width: 70px;
-    height: 3px;
-    background-color: #fec200;
-    margin: auto;
-    border: none; }
-  .elegirme .container .line .square {
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    bottom: -200%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: white;
-    border: 3px solid #fec200; }
-    .elegirme .container .line .square::before {
-      content: "";
-      position: absolute;
-      top: -5px;
-      left: -40px;
-      width: 9px;
-      height: 9px;
-      border-radius: 50px;
-      background: white;
-      border: 3px solid #fec200; }
-    .elegirme .container .line .square::after {
-      content: "";
-      position: absolute;
-      top: -5px;
-      right: -40px;
-      width: 9px;
-      height: 9px;
-      border-radius: 50px;
-      background: white;
-      border: 3px solid #fec200; }
-.elegirme .container .row {
-  width: 100%;
-  position: relative; }
-  .elegirme .container .row .info {
-    position: relative; }
-    .elegirme .container .row .info p {
-      font-family: "Raleway", sans-serif;
-      font-size: 1em;
-      margin-bottom: 10px;
-      text-align: justify;
-      font-weight: 400; }
-    .elegirme .container .row .info p.resaltado {
-      color: #1f4363;
-      font-weight: 600; }
-  .elegirme .container .row .img {
-    margin-top: 40px;
-    position: relative;
-    text-align: center; }
-    .elegirme .container .row .img .img-yo {
-      width: 90%;
-      max-width: 500px; }
+  text-align: center; }
+  .mensaje-portafolio .container .img-mensaje img {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 300px; }
 
 .contactarme {
   position: relative; }
@@ -666,7 +548,8 @@ body {
   .contactarme .container p {
     font-family: "Raleway", sans-serif;
     text-align: justify;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    color: #6E6E6E; }
   .contactarme .container .btn {
     position: relative;
     width: 100%; }
@@ -1739,4 +1622,4 @@ body {
     background-repeat: no-repeat;
     min-height: 54rem; } }
 
-/*# sourceMappingURL=sobre-mi.css.map */
+/*# sourceMappingURL=portafolio.css.map */

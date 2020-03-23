@@ -63,7 +63,7 @@ body
     width: 100%
     height: 100%
     min-height: 30rem
-    background: linear-gradient($primary-gradient-color, $primary-gradient-color), url(../img/fondos/sobre-mi.jpg)
+    background: linear-gradient($primary-gradient-color, $primary-gradient-color), url(../img/fondos/portafolio.jpg)
     background-size: cover
     background-position: center
     #svg
@@ -85,17 +85,17 @@ body
             p
                 font-family: $font-raleway
                 text-transform: uppercase
-// ============== QUIEN SOY ================
+
+// ============== TITULO DEL PORTAFOLIO ================
 @keyframes giro
     0%
         transform: rotate(45deg)
     100%
         transform: rotate(315deg) 
-.sobre-mi
+.servicios
     position: relative
     width: 100%
-    .circle-1,
-    .circle-2
+    object
         display: none
     .container
         .title
@@ -105,7 +105,7 @@ body
             justify-content: center
             align-items: center
             h2
-                padding: 0 30px 
+                padding: 0 30px
                 font-weight: 700
                 text-align: center
                 font-size: 1.875em
@@ -152,187 +152,144 @@ body
                     border-radius: 50px
                     background: white
                     border: 3px solid $secondary-color
-        .row
-            width: 100%
-            margin-top: 50px
-            display: grid
-            grid-gap: 20px
-            grid-template:
-                columns: repeat(2, 1fr)
-                rows: repeat(2, auto)
-            grid-template-areas: "img-mi img-mi" "info-mis info-mis"
-            
-            .circle-img
-                position: relative
-                grid-area: img-mi
-                width: 100%
-                .circle-2
-                    display: none
-            .info-mi
-                grid-area: info-mis
-                width: 100%
-                h3
-                    font-family: $font-raleway
-                    color: $primary-color
-                    font-size: 1.563em
-                    font-weight: 800
-                    margin-bottom: 20px
-                    text-align: center
-                p
-                    font-family: $font-raleway
-                    color: $font-text-color
-                    font-size: 1em
-                    font-weight: 500
-                    text-align: justify
-                    &:not(:last-child)
-                        margin-top: 30px
-                .buttons
-                    margin-top: 30px
-                    .btn
-                        position: relative
-                        display: block
-                        text-align: center
-                        padding: 13px
-                        font-family: $font-raleway
-                        text-decoration: none
-                        color: white
-                        font-size: 1.250em  
-                        border-radius: 50px
-                        transition: all 0.3s ease
-                        font-weight: 600
-                        box-shadow: 0px 10px 8px 0px  rgba(0,0,0,0.1)
-                        &.btn-cv
-                            background: $primary-color
-                            border: 1px solid $primary-color
-                            &:hover
-                                background: white
-                                color: $primary-color
-                                box-shadow: 0px 10px 8px 0px rgba(31, 67, 99, 0.3)
-// ============== HABILIDADES ================
-.habilidades
+
+// ============== FILTRO POR CATEGORIAS ================
+.portafolio
     position: relative
-    margin-top: 60px
-    width: 100vw
-    background: $primary-color
-    background-repeat: no-repeat
-    height: auto
-    padding: 80px 0
-    .circle-1,
-    .circle-2,
-    .square-1,
-    object
-        display: none
-    .ola-1
-        position: absolute
-        transform: rotate(180deg)
-        top: -1px
-    .ola-2
-        position: absolute
-        bottom: -1px
+    width: 100%
     .container
-        .title
+        .categorias
+            position: relative
             width: 100%
-            padding: 0 0 10px
             display: flex
+            flex-wrap: wrap
             justify-content: center
             align-items: center
-            h2
-                padding: 0px 20px 
-                font-weight: 700
-                text-align: center
-                font-size: 1.875em
+            a
                 font-family: $font-poppins
-                color: white
-            .rombo-1
-                animation: giro 4s linear infinite 
-        .line
-            @include line
-            margin-bottom: 0px
-        p
-            font-size: 1em
-            font-family: $font-raleway
-            color: white
-            text-align: center
+                text-decoration: none
+                font-weight: 500
+                color: $font-text-color
+                font-size: 1em
+                padding: 12px 30px 
+                text-align: center
+                transition: all 0.3s ease
+                &.activo
+                    background: #ffffff
+                    color: $secondary-color
+                    border-radius: 30px
+                    -webkit-box-shadow: 4px 7px 11px 0px rgba(0,0,0,0.25)
+                    -moz-box-shadow: 4px 7px 11px 0px rgba(0,0,0,0.25)
+                    box-shadow: 4px 7px 11px 0px rgba(0,0,0,0.25)
+                    &:hover
+                        color: $secondary-color
+                &:hover
+                    color: $primary-color
+                &:active
+                    color: $secondary-color
     .container
-        .row
-            .col
-                position: relative
-            .skill
-                position: relative
-                margin-bottom: 10px
-                .habilidad
-                    width: 100%
-                    color: white
-                    font-family: $font-raleway
-                .bar-progress
+        .grid
+            position: relative
+            width: 100%
+            opacity: 0
+            transition: opacity 0.5s linear 1s
+            &.imagenes-cargadas
+                opacity: 1
+            .item
+                position: absolute
+                display: block
+                padding: 0
+                margin: 10px
+                width: calc(100% - 20px)
+                .item-contenido
                     position: relative
                     width: 100%
-                    display: flex
-                    align-items: center
-                    .percent-and-progress
-                        position: relative
-                        width: 90%
-                        padding-right: 5px
-                        .percent
-                            width: 100%
-                            height: 8px
-                            border-radius: 50px
-                            background-color: white
-                            .progress
-                                background: $secondary-color
-                                height: 8px
-                                border-radius: 50px
-                                animation: bar-progress 2s ease-in-out forwards
-                            @keyframes bar-progress
-                                0%
-                                    width: 0
-                    .value
-                        position: relative
-                        width: 10%
-                        p
+                    border-radius: 10px
+                    transition: all 0.3s ease
+                    &:hover
+                        -webkit-box-shadow: 0px 9px 17px 0px rgba(0,0,0,0.15)
+                        -moz-box-shadow: 0px 9px 17px 0px rgba(0,0,0,0.15)
+                        box-shadow: 0px 9px 17px 0px rgba(0,0,0,0.15)
+                    .link
+                        position: absolute
+                        width: 100%
+                        height: calc(100% - 83px)
+                        border-top-left-radius: 10px
+                        border-top-right-radius: 10px
+                        background: rgba(0,0,0,0.5)
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        transition: all 0.3s ease
+                        opacity: 0
+                        &:hover
+                            opacity: 1
+                        a
+                            position: relative
+                            text-decoration: none
                             font-family: $font-poppins
-// ============== POR QUE ELEGIRME ================
-.elegirme
+                            font-weight: 500
+                            color: white
+                            padding: 10px 14px
+                            border-radius: 50%
+                            border: 1px solid white
+                            transition: all 0.3s ease
+                            &:hover
+                                background: white
+                                color: black
+                                -webkit-box-shadow: 0px 9px 17px 0px rgba(0,0,0,0.75)
+                                -moz-box-shadow: 0px 9px 17px 0px rgba(0,0,0,0.75)
+                                box-shadow: 0px 9px 17px 0px rgba(0,0,0,0.75)
+                    img
+                        width: 100%
+                        height: 100%
+                        border-top-left-radius: 10px
+                        border-top-right-radius: 10px
+                    .proyect-info
+                        position: relative
+                        padding: 10px 0
+                        text-align: center
+                        border-bottom-left-radius: 10px
+                        border-bottom-right-radius: 10px
+                        h4
+                            font-family: $font-raleway
+                            display: block
+                            margin-bottom: 12px
+                            font-weight: 500
+                        span
+                            display: inline-block
+                            font-family: $font-poppins
+                            font-weight: 500
+                            color: white
+                            border-radius: 20px
+                            font-size: 12px
+                            padding: 5px 15px
+                            &.web-corp
+                                background: #148ECC
+                            &.web-tienda
+                                background: #7619FF
+                            &.web-blog
+                                background: #FFC300
+// ============== MENSAJE - CADA PROYECTO ES UN CLIENTE SATISFECHO ================
+
+.mensaje-portafolio
     .container
-        .title
-            width: 100%
-            padding: 0 0 10px
-            display: flex
-            justify-content: center
-            align-items: center
-            h2
-                padding: 0px 20px 
-                font-weight: 700
-                text-align: center
-                font-size: 1.875em
-                font-family: $font-poppins
-                color: $font-color-2
-            .rombo-1
-                animation: giro 4s linear infinite 
         .line
-            @include line
-            margin-bottom: 0px
-        .row
-            width: 100%
+            margin-bottom: 30px
+        p
+            font-size: 1em
+            text-align: justify
+            font-family: $font-raleway  
+            color: $font-text-color  
+        .img-mensaje
             position: relative
-            .info
-                position: relative
-                p
-                    font-family: $font-raleway
-                    font-size: 1em
-                    margin-bottom: 10px
-                    text-align: justify
-                    font-weight: 400
-                p.resaltado
-                    color: $primary-color
-                    font-weight: 600
-            .img
-                margin-top: 40px
-                position: relative
-                text-align: center      
-                .img-yo
-                    width: 90%
-                    max-width: 500px
+            width: 100%
+            text-align: center
+            img
+                margin-top: 20px
+                width: 100%
+                max-width: 300px
+
 // ============== MENSAJE PARA CONTACTARME ================                   
 .contactarme
     position: relative
@@ -370,6 +327,7 @@ body
             font-family: $font-raleway
             text-align: justify
             margin-bottom: 20px
+            color: $font-text-color
         .btn 
             position: relative
             width: 100%
@@ -393,6 +351,7 @@ body
                     background: white
                     color: $secondary-color
                     box-shadow: 0px 10px 8px 0px rgba(254, 194, 0, 0.3)
+
 // =================== FOOTER ========================
 .footer
     width: 100%
@@ -463,6 +422,6 @@ body
         p
             font-size: 1em
             font-weight: 300
-            color: white            
+            color: white
 
-@import components/queries    
+@import components/queries

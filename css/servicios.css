@@ -250,7 +250,7 @@ body {
 @media (min-width: 1367px) {
   .nav .container-nav {
     padding: 30px 10px;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: auto;
     transition: all 0.3s ease; } }
 .header {
@@ -303,10 +303,6 @@ body {
       font-family: "Poppins", sans-serif;
       color: #6e6e6e; }
     .servicios .container .title .rombo-1 {
-      width: 14px;
-      height: 14px;
-      background: white;
-      border: 3px solid #fec200;
       animation: giro 4s linear infinite; }
   .servicios .container .line {
     margin: 0px 0px 10px;
@@ -401,6 +397,132 @@ body {
         .servicios-web .container .row .content-serv ul li img {
           width: 16px;
           margin-right: 5px; }
+
+.contacto {
+  padding: 30px 0;
+  position: relative;
+  width: 100%; }
+  .contacto .container {
+    position: relative; }
+    .contacto .container .circle-1 {
+      display: none; }
+    .contacto .container::before {
+      content: "";
+      position: absolute;
+      width: 90%;
+      margin: auto;
+      height: 80%;
+      border: 4px solid #1f4363;
+      top: 8%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+      box-shadow: 0px 2px 10px -4px rgba(30, 67, 99, 0.5);
+      display: none; }
+    .contacto .container .title {
+      width: 100%;
+      padding: 0 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      background: white; }
+      .contacto .container .title h2 {
+        padding: 0px 20px;
+        font-weight: 700;
+        text-align: center;
+        font-size: 1.875em;
+        font-family: "Poppins", sans-serif;
+        color: #6e6e6e; }
+      .contacto .container .title .rombo-1 {
+        animation: giro 4s linear infinite; }
+    .contacto .container p {
+      font-size: 1em;
+      font-family: "Raleway", sans-serif;
+      text-align: center;
+      margin-bottom: 20px; }
+    .contacto .container .formulario {
+      padding: 15px 0; }
+      .contacto .container .formulario .form-input {
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "f1 f1 f1" "f2 f2 f2" "f3 f3 f3" "f4 f4 f4"; }
+        .contacto .container .formulario .form-input .f1 {
+          grid-area: f1; }
+        .contacto .container .formulario .form-input .f2 {
+          grid-area: f2; }
+        .contacto .container .formulario .form-input .f3 {
+          grid-area: f3; }
+        .contacto .container .formulario .form-input .f4 {
+          grid-area: f4; }
+        .contacto .container .formulario .form-input .input-group {
+          position: relative;
+          width: 100%; }
+          .contacto .container .formulario .form-input .input-group .line-input {
+            position: absolute;
+            transition: all 0.3s ease;
+            width: 0%;
+            height: 2px;
+            background: #1f4363; }
+          .contacto .container .formulario .form-input .input-group .input-box {
+            position: relative;
+            width: 100%;
+            padding: 15px 20px;
+            background: rgba(110, 110, 110, 0.1);
+            border: none;
+            font-family: "Raleway", sans-serif;
+            font-weight: 600;
+            outline: none;
+            font-size: 1em; }
+            .contacto .container .formulario .form-input .input-group .input-box:focus ~ .line-input {
+              width: 100%; }
+          .contacto .container .formulario .form-input .input-group .input-mensaje {
+            width: 100%;
+            background: rgba(110, 110, 110, 0.1);
+            border: none;
+            padding: 15px 20px;
+            font-family: "Raleway", sans-serif;
+            font-weight: 600;
+            font-size: 1em;
+            resize: none;
+            outline: none;
+            margin-bottom: -8px; }
+            .contacto .container .formulario .form-input .input-group .input-mensaje:focus ~ .line-input {
+              width: 100%; }
+      .contacto .container .formulario .btn-submit {
+        display: block;
+        position: relative;
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+        height: 48px;
+        background: white;
+        top: 0px; }
+        .contacto .container .formulario .btn-submit input[type*="submit"] {
+          position: relative;
+          display: block;
+          font-family: "Raleway", sans-serif;
+          font-size: 1.125em;
+          font-weight: 600;
+          color: white;
+          background: #fec200;
+          border: none;
+          transition: all 0.3s ease;
+          border-radius: 50px;
+          padding: 12px;
+          width: 100%;
+          margin: auto;
+          outline: none;
+          box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+          outline: none;
+          cursor: pointer;
+          border: 1px solid #fec200; }
+          .contacto .container .formulario .btn-submit input[type*="submit"]:hover {
+            background: white;
+            color: #fec200;
+            box-shadow: 0px 10px 8px 0px rgba(254, 194, 0, 0.3); }
 
 .footer {
   width: 100%;
@@ -605,11 +727,15 @@ body {
   .contacto .container p {
     width: 80%;
     margin: auto;
-    font-size: 1.125em; }
+    font-size: 1.125em;
+    margin-bottom: 20px; }
   .contacto .container::before {
     width: 80%; }
   .contacto .container .formulario {
     padding: 15px 10%; }
+    .contacto .container .formulario .btn-submit input[type*="submit"] {
+      width: auto;
+      padding: 18px 32px; }
 
   .footer .list-nav {
     padding: 20px 0; }
@@ -649,6 +775,11 @@ body {
     font-size: 1.125em; }
 
   .servicios .container .description p {
+    font-size: 1.125em; }
+
+  .header-portafolio .container .title-and-subtitle h1 {
+    font-size: 2.5em; }
+  .header-portafolio .container .title-and-subtitle p {
     font-size: 1.125em; } }
 @media (min-width: 768px) {
   .header #svg {
@@ -766,7 +897,10 @@ body {
   .servicios-web .container .row .img-serv {
     text-align: center; }
     .servicios-web .container .row .img-serv img {
-      width: 80%; } }
+      width: 80%; }
+
+  .portafolio .container .grid .item {
+    width: calc(50% - 20px); } }
 @media (min-width: 992px) {
   .header {
     background: url(../img/fondos/inicio.svg);
@@ -804,10 +938,6 @@ body {
     justify-content: center;
     align-items: center; }
     .services .container .title-2 .rombo-1 {
-      width: 14px;
-      height: 14px;
-      background: white;
-      border: 3px solid #fec200;
       animation: giro 4s linear infinite; }
   .services .container .box-services {
     grid-template-columns: repeat(6, 1fr);
@@ -857,8 +987,15 @@ body {
   .suscribete .container .formulario form .form-group .input-submit {
     padding: 15px 50px; }
 
+  .contacto .container::before {
+    display: block; }
   .contacto .container .title {
-    width: 30%; }
+    width: 30%;
+    margin-top: -10px; }
+    .contacto .container .title h2 {
+      padding: 0 30px; }
+  .contacto .container p {
+    margin-bottom: 20px; }
   .contacto .container .formulario .form-input {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
@@ -867,7 +1004,7 @@ body {
     width: 30%;
     top: 17px; }
     .contacto .container .formulario .btn-submit input[type*="submit"] {
-      padding: 15px; }
+      padding: 15px 50px; }
 
   .footer {
     padding: 0px; }
@@ -879,6 +1016,8 @@ body {
     background-size: cover;
     min-height: 35rem;
     height: 100%; }
+    .header-sobre-mi .container {
+      min-height: 23rem; }
 
   .habilidades {
     background: url(../img/fondos/portafolio.svg);
@@ -899,6 +1038,8 @@ body {
         line-height: 30px; }
     .elegirme .container .row .img {
       margin-top: 0px; }
+      .elegirme .container .row .img .img-yo {
+        max-width: 400px; }
 
   .contactarme .container p {
     max-width: 834px;
@@ -913,6 +1054,8 @@ body {
     background-size: cover;
     min-height: 35rem;
     height: 100%; }
+    .header-servicios .container {
+      min-height: 23rem; }
 
   .servicios-web .container .row {
     grid-template-columns: repeat(2, 1fr);
@@ -925,7 +1068,30 @@ body {
     .servicios-web .container .row .content-serv {
       padding: 30px 20px; }
       .servicios-web .container .row .content-serv h2 {
-        font-size: 2em; } }
+        font-size: 2em; }
+
+  .contacto .container .title {
+    width: 50%;
+    margin-top: -10px; }
+
+  .header-portafolio {
+    background: url(../img/fondos/mi-portafolio.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 35rem;
+    height: 100%; }
+    .header-portafolio .container {
+      min-height: 23rem; }
+
+  .portafolio .container .grid .item {
+    width: calc(33.33% - 20px); }
+
+  .mensaje-portafolio .container .line {
+    margin-bottom: 20px; }
+  .mensaje-portafolio .container p {
+    font-size: 1em;
+    text-align: center; } }
 @media (min-width: 1200px) {
   body {
     overflow-x: hidden; }
@@ -1161,10 +1327,11 @@ body {
     width: 97%;
     height: 85%; }
   .contacto .container .title {
-    position: relative;
-    top: -15px; }
+    position: relative; }
     .contacto .container .title h2 {
       font-size: 2.5em; }
+  .contacto .container p {
+    margin-bottom: 20px; }
   .contacto .container .formulario {
     padding: 30px 5% 0px; }
     .contacto .container .formulario .form-input .input-group .input-box {
@@ -1172,8 +1339,6 @@ body {
     .contacto .container .formulario .form-input .input-group .input-mensaje {
       padding: 20px 26px;
       height: 160px; }
-    .contacto .container .formulario .btn-submit input[type*="submit"] {
-      max-width: 180px; }
 
   .header-sobre-mi {
     min-height: 35rem; }
@@ -1310,7 +1475,53 @@ body {
       .servicios-web .container .row .content-serv ul li {
         font-size: 1.125em; }
         .servicios-web .container .row .content-serv ul li img {
-          margin-right: 15px; } }
+          margin-right: 15px; }
+
+  .contacto-serv .circle-2 {
+    display: block;
+    position: absolute;
+    top: -36%;
+    left: -250px;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    z-index: -10;
+    background: linear-gradient(#ffd54d, #ffc200);
+    box-shadow: 0px 11px 40px -5px #fec200; }
+
+  .header-portafolio {
+    min-height: 35rem; }
+    .header-portafolio .container {
+      min-height: 25rem; }
+      .header-portafolio .container .title-and-subtitle h1 {
+        font-size: 3.5em; }
+
+  .serv-portafolio object {
+    display: block;
+    position: absolute;
+    width: 100px;
+    opacity: 1; }
+    .serv-portafolio object.objeto1 {
+      top: 81%;
+      left: -35px; }
+    .serv-portafolio object.objeto2 {
+      top: -40%;
+      right: -35px; }
+
+  .portafolio .container .categorias a {
+    margin: 0 10px; }
+
+  .mensaje-portafolio .container .line {
+    margin-bottom: 20px; }
+  .mensaje-portafolio .container p {
+    width: 80%;
+    margin: auto;
+    font-size: 1em;
+    text-align: center; }
+  .mensaje-portafolio .container .img-mensaje img {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 350px; } }
 @media (min-width: 1367px) {
   .container {
     max-width: 1200px; }
@@ -1324,12 +1535,17 @@ body {
       align-items: center; }
 
   .header-sobre-mi,
-  .header-servicios {
+  .header-servicios,
+  .header-portafolio {
     min-height: 38rem; }
     .header-sobre-mi .container,
-    .header-servicios .container {
-      min-height: 38rem; } }
-@media (min-width: 1400px) {
+    .header-servicios .container,
+    .header-portafolio .container {
+      min-height: 30rem; }
+
+  .habilidades {
+    min-height: 47rem; } }
+@media (min-width: 1600px) {
   .header {
     background: url(../img/fondos/1400/iniciobig.svg);
     background-repeat: no-repeat;
@@ -1348,6 +1564,11 @@ body {
 
   .header-servicios {
     background: url(../img/fondos/1400/serviciosbig.svg);
+    background-repeat: no-repeat;
+    min-height: 54rem; }
+
+  .header-portafolio {
+    background: url(../img/fondos/1400/mi-portafoliobig.svg);
     background-repeat: no-repeat;
     min-height: 54rem; } }
 

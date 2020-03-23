@@ -156,10 +156,15 @@
                 width: 80%
                 margin: auto
                 font-size: 1.125em
+                margin-bottom: 20px
             &::before
                 width: 80%
             .formulario
                 padding: 15px 10%
+                .btn-submit
+                    input[type*="submit"]
+                        width: auto
+                        padding: 18px 32px
     .footer
         .list-nav
             padding: 20px 0
@@ -210,6 +215,14 @@
     .servicios
         .container
             .description
+                p
+                    font-size: 1.125em
+    // ================ PORTAFOLIO =================
+    .header-portafolio
+        .container
+            .title-and-subtitle
+                h1
+                    font-size: 2.5em
                 p
                     font-size: 1.125em
                     
@@ -361,7 +374,14 @@
                     text-align: center
                     img
                         width: 80%
-
+    
+    // ================ PORTAFOLIO =================
+    .portafolio
+        .container 
+            .grid
+                .item
+                    width: calc(50% - 20px)   
+                    
 @media (min-width: 992px)
     .header
         background: url(../img/fondos/inicio.svg)
@@ -407,10 +427,6 @@
                 justify-content: center
                 align-items: center
                 .rombo-1
-                    width: 14px
-                    height: 14px
-                    background: white
-                    border: 3px solid $secondary-color
                     animation: giro 4s linear infinite
             .box-services
                 grid-template: 
@@ -473,8 +489,15 @@
                             padding: 15px 50px
     .contacto
         .container
+            &::before
+                display: block
             .title
                 width: 30%
+                margin-top: -10px
+                h2
+                    padding: 0 30px
+            p
+                margin-bottom: 20px
             .formulario
                 .form-input
                     grid-template: 
@@ -485,7 +508,7 @@
                     width: 30%
                     top: 17px
                     input[type*="submit"]
-                        padding: 15px
+                        padding: 15px 50px
     .footer
         padding: 0px
     // ================ SOBRE MI =================
@@ -496,6 +519,8 @@
         background-size: cover
         min-height: 35rem
         height: 100%
+        .container
+            min-height: 23rem
     .habilidades
         background: url(../img/fondos/portafolio.svg)
         background-repeat: no-repeat
@@ -517,6 +542,8 @@
                         line-height: 30px
                 .img
                     margin-top: 0px
+                    .img-yo
+                        max-width: 400px
     .contactarme
         .container
             p
@@ -533,6 +560,8 @@
         background-size: cover
         min-height: 35rem
         height: 100%
+        .container
+            min-height: 23rem
     .servicios-web
         .container
             .row
@@ -547,6 +576,34 @@
                     padding: 30px 20px
                     h2
                         font-size: 2em
+    .contacto
+        .container
+            .title
+                width: 50%
+                margin-top: -10px
+
+    // ================ PORTAFOLIO =================
+    .header-portafolio
+        background: url(../img/fondos/mi-portafolio.svg)
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        min-height: 35rem
+        height: 100%
+        .container
+            min-height: 23rem
+    .portafolio
+        .container 
+            .grid
+                .item
+                    width: calc(33.33% - 20px)
+    .mensaje-portafolio
+        .container
+            .line
+                margin-bottom: 20px
+            p
+                font-size: 1em
+                text-align: center
 
 @media (min-width: 1200px)
     body
@@ -792,9 +849,10 @@
                 height: 85%
             .title
                 position: relative
-                top: -15px
                 h2
                     font-size: 2.5em
+            p
+                margin-bottom: 20px
             .formulario
                 padding: 30px 5% 0px
                 .form-input
@@ -806,7 +864,6 @@
                             height: 160px
                 .btn-submit
                     input[type*="submit"] 
-                        max-width: 180px
     // ================ SOBRE MI =================
     .header-sobre-mi
         min-height: 35rem
@@ -960,6 +1017,58 @@
                             font-size: 1.125em
                             img
                                 margin-right: 15px
+    .contacto-serv
+        .circle-2
+            display: block
+            position: absolute
+            top: -36%
+            left: -250px
+            width: 360px
+            height: 360px
+            border-radius: 50%
+            z-index: -10
+            background: $secondary-gradient-color-2
+            box-shadow: 0px 11px 40px -5px $secondary-color
+
+    // ================ MI PORTAFOLIO =================
+    .header-portafolio
+        min-height: 35rem
+        .container
+            min-height: 25rem
+            .title-and-subtitle
+                h1
+                    font-size: 3.5em
+    .serv-portafolio
+        object
+            display: block
+            position: absolute
+            width: 100px 
+            opacity: 1
+            &.objeto1
+                top: 81%
+                left: -35px
+            &.objeto2
+                top: -40%
+                right: -35px
+    .portafolio
+        .container
+            .categorias
+                a
+                    margin: 0 10px
+    .mensaje-portafolio
+        .container
+            .line
+                margin-bottom: 20px
+            p
+                width: 80%
+                margin: auto
+                font-size: 1em
+                text-align: center
+            .img-mensaje
+                img
+                    margin-top: 30px
+                    width: 100%
+                    max-width: 350px
 
 @media (min-width: 1367px)
     .container
@@ -972,12 +1081,16 @@
             display: flex
             align-items: center
     .header-sobre-mi,
-    .header-servicios
+    .header-servicios,
+    .header-portafolio
         min-height: 38rem
         .container
-            min-height: 38rem
+            min-height: 30rem
+    // ================ SOBRE MI =================
+    .habilidades
+        min-height: 47rem
 
-@media (min-width: 1400px)
+@media (min-width: 1600px)
     .header
         background: url(../img/fondos/1400/iniciobig.svg)
         background-repeat: no-repeat
@@ -994,6 +1107,11 @@
     // ================ SERVICIOS =================
     .header-servicios 
         background: url(../img/fondos/1400/serviciosbig.svg)
+        background-repeat: no-repeat
+        min-height: 54rem
+    // ================ SERVICIOS =================
+    .header-portafolio
+        background: url(../img/fondos/1400/mi-portafoliobig.svg)
         background-repeat: no-repeat
         min-height: 54rem
    
