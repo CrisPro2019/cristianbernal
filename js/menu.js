@@ -6,6 +6,7 @@ var line_3      = document.getElementById("line-3")
 var nav_scroll  = document.getElementById("nav")
 var nav_cont    = document.getElementById("container-nav")
 var cb_text     = document.getElementById("cbtext")
+var cb_text2     = document.getElementById("cbtext2")
 var scroll_down = document.getElementById("scroll-down")
 var cuerpo      = document.getElementById("body")
 
@@ -17,6 +18,7 @@ icon_menu.addEventListener("click", function() {
     flex_menu.classList.toggle("active")
     nav_scroll.classList.toggle("active-2")
     cb_text.classList.toggle("active")
+    cb_text2.classList.toggle("active")
     cuerpo.classList.toggle("active-scroll")
 })
 

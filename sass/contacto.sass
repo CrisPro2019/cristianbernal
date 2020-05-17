@@ -81,12 +81,13 @@ body
             text-align: center
             color: white
             h1
-                font-family: $font-poppins
+                font-family: $font-principal
             p
-                font-family: $font-raleway
+                font-family: $font-principal
+                font-weight: 300
                 text-transform: uppercase
 
-// ============== TITULO DEL PORTAFOLIO ================
+// ============== TITULO DEL CONTACTO ================
 @keyframes giro
     0%
         transform: rotate(45deg)
@@ -109,7 +110,7 @@ body
                 font-weight: 700
                 text-align: center
                 font-size: 1.875em
-                font-family: $font-poppins
+                font-family: $font-principal 
                 color: $font-color-2
             .rombo-1
                 animation: giro 4s linear infinite
@@ -157,7 +158,8 @@ body
             width: 100%
             padding: 20px 0
             p
-                font-family: $font-raleway
+                font-family: $font-secundario
+                color: $font-text-color
                 font-size: 1em
                 text-align: center
 // ============== FORMULARIO DE CONTACTO ================
@@ -218,7 +220,7 @@ body
                                 padding: 15px 20px
                                 background: rgba(110, 110, 110, 0.1)
                                 border: none
-                                font-family: $font-raleway
+                                font-family: $font-secundario
                                 font-weight: 600
                                 outline: none
                                 font-size: 1em
@@ -229,7 +231,7 @@ body
                                 background: rgba(110, 110, 110, 0.1)
                                 border: none
                                 padding: 15px 20px
-                                font-family: $font-raleway
+                                font-family: $font-secundario
                                 font-weight: 600
                                 font-size: 1em
                                 resize: none
@@ -250,9 +252,9 @@ body
                         input[type*="submit"]
                             position: relative
                             display: block
-                            font-family: $font-raleway
+                            font-family: $font-principal
                             font-size: 1.125em
-                            font-weight: 600
+                            font-weight: 500
                             color: white
                             background: $secondary-color
                             border: none
@@ -278,7 +280,7 @@ body
     width: 100%
     padding: 60px 0px 0px 0px
     position: relative
-    font-family: $font-raleway
+    font-family: $font-principal
     background: $primary-color
     svg
         position: absolute
@@ -298,7 +300,7 @@ body
                     color: rgba(255,255,255,0.8)
                     font-size: 1.250em
                     transition: all 0.3s ease
-                    font-weight: 600
+                    font-weight: 500
                     &:hover
                         color: white
             .list-nav-active 
@@ -343,5 +345,6 @@ body
         p
             font-size: 1em
             font-weight: 300
-            color: white
+            color: white  
+
 @import components/queries

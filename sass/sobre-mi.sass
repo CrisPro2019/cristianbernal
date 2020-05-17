@@ -81,10 +81,11 @@ body
             text-align: center
             color: white
             h1
-                font-family: $font-poppins
+                font-family: $font-principal
             p
-                font-family: $font-raleway
+                font-family: $font-principal
                 text-transform: uppercase
+                font-weight: 300
 // ============== QUIEN SOY ================
 @keyframes giro
     0%
@@ -109,7 +110,7 @@ body
                 font-weight: 700
                 text-align: center
                 font-size: 1.875em
-                font-family: $font-poppins
+                font-family: $font-principal
                 color: $font-color-2
             .rombo-1
                 animation: giro 4s linear infinite
@@ -172,18 +173,19 @@ body
                 grid-area: info-mis
                 width: 100%
                 h3
-                    font-family: $font-raleway
+                    font-family: $font-principal
                     color: $primary-color
                     font-size: 1.563em
-                    font-weight: 800
+                    font-weight: 700
                     margin-bottom: 20px
                     text-align: center
                 p
-                    font-family: $font-raleway
+                    font-family: $font-secundario
                     color: $font-text-color
                     font-size: 1em
-                    font-weight: 500
+                    font-weight: 400
                     text-align: justify
+                    line-height: 30px
                     &:not(:last-child)
                         margin-top: 30px
                 .buttons
@@ -193,13 +195,13 @@ body
                         display: block
                         text-align: center
                         padding: 13px
-                        font-family: $font-raleway
+                        font-family: $font-principal
                         text-decoration: none
                         color: white
-                        font-size: 1.250em  
+                        font-size: 1.125em  
                         border-radius: 50px
                         transition: all 0.3s ease
-                        font-weight: 600
+                        font-weight: 500
                         box-shadow: 0px 10px 8px 0px  rgba(0,0,0,0.1)
                         &.btn-cv
                             background: $primary-color
@@ -241,7 +243,7 @@ body
                 font-weight: 700
                 text-align: center
                 font-size: 1.875em
-                font-family: $font-poppins
+                font-family: $font-principal
                 color: white
             .rombo-1
                 animation: giro 4s linear infinite 
@@ -250,7 +252,8 @@ body
             margin-bottom: 0px
         p
             font-size: 1em
-            font-family: $font-raleway
+            font-weight: 300
+            font-family: $font-secundario
             color: white
             text-align: center
     .container
@@ -263,7 +266,8 @@ body
                 .habilidad
                     width: 100%
                     color: white
-                    font-family: $font-raleway
+                    font-family: $font-principal
+                    font-weight: 300
                 .bar-progress
                     position: relative
                     width: 100%
@@ -290,7 +294,7 @@ body
                         position: relative
                         width: 10%
                         p
-                            font-family: $font-poppins
+                            font-family: $font-principal
 // ============== POR QUE ELEGIRME ================
 .elegirme
     .container
@@ -305,7 +309,7 @@ body
                 font-weight: 700
                 text-align: center
                 font-size: 1.875em
-                font-family: $font-poppins
+                font-family: $font-principal
                 color: $font-color-2
             .rombo-1
                 animation: giro 4s linear infinite 
@@ -318,14 +322,15 @@ body
             .info
                 position: relative
                 p
-                    font-family: $font-raleway
+                    font-family: $font-secundario
                     font-size: 1em
                     margin-bottom: 10px
                     text-align: justify
                     font-weight: 400
+                    color: $font-text-color
                 p.resaltado
                     color: $primary-color
-                    font-weight: 600
+                    font-weight: 700
             .img
                 margin-top: 40px
                 position: relative
@@ -348,7 +353,7 @@ body
                 font-weight: 700
                 text-align: center
                 font-size: 1.625em
-                font-family: $font-poppins
+                font-family: $font-principal
                 color: $font-color-2
             .title-2
                 display: flex
@@ -359,7 +364,7 @@ body
                     font-weight: 700
                     text-align: center
                     font-size: 1.500em
-                    font-family: $font-poppins
+                    font-family: $font-principal
                     color: $font-color-2
                 .rombo-1
                     animation: giro 4s linear infinite
@@ -367,9 +372,10 @@ body
             @include line
             margin-bottom: 20px 
         p
-            font-family: $font-raleway
+            font-family: $font-secundario
             text-align: justify
             margin-bottom: 20px
+            color: $font-text-color
         .btn 
             position: relative
             width: 100%
@@ -378,13 +384,13 @@ body
                 display: block
                 text-align: center
                 padding: 13px
-                font-family: $font-raleway
+                font-family: $font-principal
                 text-decoration: none
                 color: white
-                font-size: 1.250em
+                font-size: 1.125em
                 border-radius: 50px
                 transition: all 0.3s ease
-                font-weight: 600
+                font-weight: 500
                 box-shadow: 0px 10px 8px 0px  rgba(0,0,0,0.1)
                 border: 1px solid $secondary-color
                 background: $secondary-color
@@ -398,7 +404,7 @@ body
     width: 100%
     padding: 60px 0px 0px 0px
     position: relative
-    font-family: $font-raleway
+    font-family: $font-principal
     background: $primary-color
     svg
         position: absolute
@@ -418,7 +424,7 @@ body
                     color: rgba(255,255,255,0.8)
                     font-size: 1.250em
                     transition: all 0.3s ease
-                    font-weight: 600
+                    font-weight: 500
                     &:hover
                         color: white
             .list-nav-active 
@@ -463,6 +469,6 @@ body
         p
             font-size: 1em
             font-weight: 300
-            color: white            
+            color: white      
 
 @import components/queries    

@@ -81,9 +81,10 @@ body
             text-align: center
             color: white
             h1
-                font-family: $font-poppins
+                font-family: $font-principal
             p
-                font-family: $font-raleway
+                font-family: $font-principal
+                font-weight: 300
                 text-transform: uppercase
 
 // ============== TITULO DEL PORTAFOLIO ================
@@ -109,7 +110,7 @@ body
                 font-weight: 700
                 text-align: center
                 font-size: 1.875em
-                font-family: $font-poppins
+                font-family: $font-principal
                 color: $font-color-2
             .rombo-1
                 animation: giro 4s linear infinite
@@ -166,7 +167,7 @@ body
             justify-content: center
             align-items: center
             a
-                font-family: $font-poppins
+                font-family: $font-principal
                 text-decoration: none
                 font-weight: 500
                 color: $font-text-color
@@ -227,7 +228,7 @@ body
                         a
                             position: relative
                             text-decoration: none
-                            font-family: $font-poppins
+                            font-family: $font-principal
                             font-weight: 500
                             color: white
                             padding: 10px 14px
@@ -252,13 +253,13 @@ body
                         border-bottom-left-radius: 10px
                         border-bottom-right-radius: 10px
                         h4
-                            font-family: $font-raleway
+                            font-family: $font-secundario
                             display: block
                             margin-bottom: 12px
                             font-weight: 500
                         span
                             display: inline-block
-                            font-family: $font-poppins
+                            font-family: $font-principal
                             font-weight: 500
                             color: white
                             border-radius: 20px
@@ -270,6 +271,7 @@ body
                                 background: #7619FF
                             &.web-blog
                                 background: #FFC300
+
 // ============== MENSAJE - CADA PROYECTO ES UN CLIENTE SATISFECHO ================
 
 .mensaje-portafolio
@@ -279,8 +281,9 @@ body
         p
             font-size: 1em
             text-align: justify
-            font-family: $font-raleway  
+            font-family: $font-secundario  
             color: $font-text-color  
+            line-height: 30px
         .img-mensaje
             position: relative
             width: 100%
@@ -305,7 +308,7 @@ body
                 font-weight: 700
                 text-align: center
                 font-size: 1.625em
-                font-family: $font-poppins
+                font-family: $font-principal
                 color: $font-color-2
             .title-2
                 display: flex
@@ -316,7 +319,7 @@ body
                     font-weight: 700
                     text-align: center
                     font-size: 1.500em
-                    font-family: $font-poppins
+                    font-family: $font-principal
                     color: $font-color-2
                 .rombo-1
                     animation: giro 4s linear infinite
@@ -324,10 +327,11 @@ body
             @include line
             margin-bottom: 20px 
         p
-            font-family: $font-raleway
+            font-family: $font-secundario
             text-align: justify
             margin-bottom: 20px
             color: $font-text-color
+            line-height: 30px
         .btn 
             position: relative
             width: 100%
@@ -336,13 +340,13 @@ body
                 display: block
                 text-align: center
                 padding: 13px
-                font-family: $font-raleway
+                font-family: $font-principal
                 text-decoration: none
                 color: white
-                font-size: 1.250em
+                font-size: 1.125em
                 border-radius: 50px
                 transition: all 0.3s ease
-                font-weight: 600
+                font-weight: 500
                 box-shadow: 0px 10px 8px 0px  rgba(0,0,0,0.1)
                 border: 1px solid $secondary-color
                 background: $secondary-color
@@ -357,7 +361,7 @@ body
     width: 100%
     padding: 60px 0px 0px 0px
     position: relative
-    font-family: $font-raleway
+    font-family: $font-principal
     background: $primary-color
     svg
         position: absolute
@@ -377,7 +381,7 @@ body
                     color: rgba(255,255,255,0.8)
                     font-size: 1.250em
                     transition: all 0.3s ease
-                    font-weight: 600
+                    font-weight: 500
                     &:hover
                         color: white
             .list-nav-active 

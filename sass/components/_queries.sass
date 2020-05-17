@@ -202,7 +202,7 @@
                 .contact-now
                     width: fit-content
                     margin: auto
-                    padding: 18px 32px
+                    padding: 13px 50px
 
     // ================ SERVICIOS =================
     .header-servicios
@@ -225,7 +225,16 @@
                     font-size: 2.5em
                 p
                     font-size: 1.125em
-    // ================ PORTAFOLIO =================
+    // ============= POSTS GRID ===================
+    .posts
+        .container-full
+            .posts-grid
+                .post
+                    .box-img
+                        svg
+                            display: none
+
+    // ================ CONTACTO =================
     .header-contacto
         .container
             .title-and-subtitle
@@ -243,7 +252,7 @@
                         .btn-submit
                             input[type*="submit"]
                                 width: auto
-                                padding: 18px 32px
+                                padding: 13px 32px
 
 @media (min-width: 768px)// and (max-width: 991.98px)
     .header
@@ -399,8 +408,37 @@
         .container 
             .grid
                 .item
-                    width: calc(50% - 20px)   
-                    
+                    width: calc(50% - 20px)  
+
+    // ================ POSTS =================   
+    .posts
+        .container-full
+            width: calc(100% - 8%)
+            margin: auto
+            .posts-grid
+                grid-gap: 20px
+                grid-template:
+                    columns: repeat(2, 1fr) 
+                .post
+                    border-radius: 10px   
+                    box-shadow: 0px 6px 20px 1px rgba(30, 67, 99, 0.1)  
+                    .box-img
+                        width: 100%
+                        position: relative
+                        a
+                            position: relative
+                            width: 100%
+                            display: block
+                            img
+                                width: 100%
+                                height: auto
+                                object-fit: contain
+                        svg 
+                            display: inline-block
+                    .box-content
+                        height: auto !important
+                        padding-bottom: 30px
+
 @media (min-width: 992px)
     .header
         background: url(../img/fondos/inicio.svg)
@@ -569,6 +607,7 @@
                 max-width: 834px
                 margin: auto
                 margin-bottom: 20px
+                line-height: 30px
                 text-align: center
 
     // ================ SERVICIOS =================
@@ -619,16 +658,30 @@
     .mensaje-portafolio
         .container
             .line
-                margin-bottom: 20px
+                margin-bottom: 40px
             p
+                max-width: 834px
+                margin: auto
                 font-size: 1em
                 text-align: center
     // ================ BLOG =====================
+    .blog-carrusel
+        .container
+            display: block
     .blog-contacto
         padding-top: 50px 
+    // ================ POSTS =================  
+    .blog-carrusel
+        padding-top: 150px 
+    .posts
+        .container-full
+            width: calc(100% - 8%)
+            margin: auto
+            .posts-grid
+                grid-gap: 50px
     // ================ CONTACTO =================
     .header-contacto
-        background: url(../img/fondos/mi-portafolio.svg)
+        background: url(../img/fondos/contacto.svg)
         background-repeat: no-repeat
         background-position: center
         background-size: cover
@@ -668,10 +721,9 @@
                     left: 0
                     transform: translate(0,0)
                     text-align: left
-                    width: 80%
+                    width: 100%
                     .info-1
                         width: 100%
-                        font-weight: 400
                         font-size: 1.375em
                     div
                         justify-content: flex-start
@@ -682,6 +734,14 @@
                     .information
                         width: 100%
                         font-size: 1.125em
+                        margin-bottom: 40px
+                        display: none
+                    .information-2
+                        display: block
+                        width: 100%
+                        font-size: 1.125em
+                        font-weight: 300
+                        margin-top: 0px
                         margin-bottom: 40px
                     .info-buttons
                         display: flex
@@ -697,9 +757,9 @@
                             color: white
                             text-decoration: none
                             font-size: 1.125em
-                            font-weight: 600
+                            font-weight: 400
                             border-radius: 50px
-                            font-family: $font-raleway
+                            font-family: $font-principal
                             border: 1px solid white 
                             transition: all 0.3s ease
                             &:hover
@@ -1053,6 +1113,7 @@
                     padding: 30px 20px
                     h2
                         font-size: 2.4em
+                        line-height: 50px
                     p
                         font-size: 1.125em
                         margin-bottom: 30px
@@ -1101,8 +1162,6 @@
                     margin: 0 10px
     .mensaje-portafolio
         .container
-            .line
-                margin-bottom: 20px
             p
                 width: 80%
                 margin: auto
@@ -1113,6 +1172,36 @@
                     margin-top: 30px
                     width: 100%
                     max-width: 350px
+    // ================ BLOG =====================
+    .blog-carrusel
+        .container
+            .slider-blog
+                .swiper-container
+                    .swiper-wrapper
+                        .swiper-slide
+                            .contenido
+                                width: 40%
+                                .content-flex
+                                    h2
+                                        font-size: 2.2em
+                            .contenido-imagen
+                                width: 60%
+                                svg
+                                    display: block
+    // ================ POSTS =================   
+    .posts
+        .container-full
+            width: calc(100% - 8%)
+            margin: auto
+            .posts-grid
+                grid-gap: 30px
+                grid-template:
+                    columns: repeat(3, 1fr) 
+                .post 
+                    box-shadow: 0px 6px 20px 1px rgba(30, 67, 99, 0)
+                    transition: all 0.3s ease
+                    &:hover
+                        box-shadow: 0px 6px 20px 1px rgba(30, 67, 99, 0.1)
     // ================ CONTACTO =================
     .header-contacto
         min-height: 35rem
@@ -1214,7 +1303,7 @@
         background-repeat: no-repeat
         min-height: 54rem
     // ================ CONTACTO =================
-    .header-portafolio
+    .header-contacto
         background: url(../img/fondos/1400/contactobig.svg)
         background-repeat: no-repeat
         min-height: 54rem

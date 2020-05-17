@@ -57,6 +57,178 @@ body
 
 @import nav
 
+// ============= BLOG CARRUSEL ================  
+.blog-carrusel
+    position: relative
+    padding-bottom: 120px
+    .container
+        display: none    // -------------------------------- OCULTE EL SLIDER BLOG
+        .slider-blog
+            margin: auto
+            position: relative
+            max-width: 1200px
+            width: 100%
+            height: 500px
+            .swiper-container 
+                width: 100%
+                height: 100%
+                border-radius: 10px
+                -webkit-box-shadow: 0px 10px 34px -5px rgba(30,67,99,0.5)
+                -moz-box-shadow: 0px 10px 34px -5px rgba(30,67,99,0.5)
+                box-shadow: 0px 10px 34px -5px rgba(30,67,99,0.5)
+                .swiper-wrapper
+                    .swiper-slide 
+                        display: flex
+                        position: relative 
+                        .contenido
+                            position: relative
+                            width: 50%
+                            border-top-left-radius: 10px
+                            border-bottom-left-radius: 10px
+                            background-color: $primary-color
+                            padding: 45px 30px 45px 60px
+                            display: flex
+                            align-items: center
+                            .content-flex
+                                position: relative
+                                h2
+                                    font-size: 2em
+                                    font-family: $font-principal
+                                    font-weight: 600
+                                    color: white
+                                hr
+                                    width: 100px
+                                    margin-top: 14px
+                                    margin-bottom: 20px
+                                .autor-fecha
+                                    position: relative
+                                    font-family: $font-principal
+                                    color: $secondary-color
+                                    font-size: 1em
+                                    margin-bottom: 30px
+                                    .punto-medio
+                                        font-weight: bold
+                                        padding: 0 5px
+                                p
+                                    font-family: $font-secundario
+                                    color: white
+                                    opacity: 0.8
+                                    font-size: 1em
+                                    line-height: 24px
+                                    margin-bottom: 20px
+                                a
+                                    display: inline-block
+                                    text-decoration: none
+                                    background: $secondary-color
+                                    font-family: $font-principal
+                                    text-transform: uppercase
+                                    font-size: 1.125em
+                                    font-weight: 500
+                                    color: white
+                                    border-radius: 30px
+                                    padding: 14px 30px
+                                    -webkit-box-shadow: 0px 5px 20px -5px rgba(0,0,0,0.75)
+                                    -moz-box-shadow: 0px 5px 20px -5px rgba(0,0,0,0.75)
+                                    box-shadow: 0px 5px 20px -5px rgba(0,0,0,0.75)
+                                    transition: all 0.3s ease
+                                    &:hover
+                                        transform: scale(1.05)
+                        .contenido-imagen
+                            width: 50%
+                            object-fit: cover
+                            border-top-right-radius: 10px
+                            border-bottom-right-radius: 10px
+                            overflow: hidden
+                            position: relative
+                            svg
+                                position: absolute
+                                left: -61%
+                                display: none
+                            img
+                                width: 100%
+                .swiper-pagination
+                    .swiper-pagination-bullet
+                        width: 12px
+                        height: 12px
+                    .swiper-pagination-bullet-active
+                        background: $secondary-color
+                .swiper-button-next, 
+                .swiper-button-prev
+                    color: $secondary-color
+        
+// ============= POSTS GRID ================ 
+.posts
+    position: relative
+    padding-bottom: 50px
+    .container-full
+        position: relative
+        width: 100%
+        .posts-grid
+            position: relative
+            display: grid
+            grid-template: 
+                columns: repeat(1, 1fr)
+            .post
+                position: relative
+                margin: auto
+                overflow: hidden
+                width: 100%
+                height: 100%
+                box-shadow: 0px 6px 20px 1px rgba(30, 67, 99, 0.3)
+                .box-img
+                    width: 100%
+                    position: relative
+                    a
+                        position: relative
+                        width: 100%
+                        display: block
+                        img
+                            width: 100%
+                            height: 250px
+                            object-fit: cover
+                    svg
+                        margin-top: -126px
+                .box-content
+                    position: relative
+                    width: 100%
+                    height: 200px
+                    padding: 10px 20px 20px
+                    .date-name
+                        width: 100%
+                        display: flex
+                        justify-content: space-between
+                        font-family: $font-principal
+                        span
+                            font-size: 0.750em
+                            color: $secondary-color
+                    .title-blog
+                        margin: 10px 0
+                        width: 100%
+                        h4     
+                            font-size: 1.250em
+                            font-family: $font-principal
+                            line-height: 25px
+                            text-align: left
+                            a
+                                text-decoration: none
+                                color: $primary-color
+                                transition: all 0.3s ease
+                                &:hover
+                                    color: $secondary-color
+                                    text-shadow: 0px 1px 2px rgba(0,0,0,0.2)
+                    .text-blog
+                        width: 100%
+                        p
+                            display: block
+                            display: -webkit-box
+                            -webkit-line-clamp: 3
+                            -webkit-box-orient: vertical
+                            overflow: hidden
+                            font-family: $font-secundario
+                            text-align: justify
+                            color: $font-text-color
+                            font-size: 1em
+                            text-overflow: ellipsis                  
 // ============= SUSCRIPCION A NEWSLLTTER ================
 
 .suscribete
@@ -123,11 +295,12 @@ body
                 font-weight: 700
                 text-align: center
                 font-size: 1.55em
-                font-family: $font-poppins
+                font-family: $font-principal
                 color: white
         p
             font-size: 1em
-            font-family: $font-raleway
+            font-weight: 300
+            font-family: $font-secundario
             text-align: center
             color: rgba(255,255,255,0.8)
         .formulario
@@ -137,7 +310,7 @@ body
                 .form-group
                     width: 100%
                     .input-box
-                        font-family: $font-raleway
+                        font-family: $font-principal
                         width: 100%
                         display: block
                         margin-bottom: 20px
@@ -150,13 +323,13 @@ body
                         outline: none
                         font-size: 1em
                     .input-submit
-                        font-family: $font-raleway
+                        font-family: $font-principal
                         width: 100%
                         display: block
                         background: $secondary-color
                         padding: 12px
                         font-size: 1.125em
-                        font-weight: 600
+                        font-weight: 500
                         transition: all 0.3s ease
                         border: none
                         border-radius: 50px
@@ -170,7 +343,12 @@ body
                             color: $secondary-color
                             box-shadow: 0px 10px 8px 0px rgba(254, 194, 0, 0.1)
 
-// ============== MENSAJE PARA CONTACTARME ================                   
+// ============== MENSAJE PARA CONTACTARME ================     
+@keyframes giro
+    0%
+        transform: rotate(45deg)
+    100%
+        transform: rotate(315deg)               
 .contactarme
     position: relative
     .circle-1,         
@@ -186,7 +364,7 @@ body
                 font-weight: 700
                 text-align: center
                 font-size: 1.625em
-                font-family: $font-poppins
+                font-family: $font-principal
                 color: $font-color-2
             .title-2
                 display: flex
@@ -197,7 +375,7 @@ body
                     font-weight: 700
                     text-align: center
                     font-size: 1.500em
-                    font-family: $font-poppins
+                    font-family: $font-principal
                     color: $font-color-2
                 .rombo-1
                     animation: giro 4s linear infinite
@@ -205,7 +383,9 @@ body
             @include line
             margin-bottom: 20px 
         p
-            font-family: $font-raleway
+            font-family: $font-secundario
+            color: $font-text-color
+            line-height: 30px
             text-align: justify
             margin-bottom: 20px
         .btn 
@@ -216,13 +396,13 @@ body
                 display: block
                 text-align: center
                 padding: 13px
-                font-family: $font-raleway
+                font-family: $font-principal
                 text-decoration: none
                 color: white
-                font-size: 1.250em
+                font-size: 1.125em
                 border-radius: 50px
                 transition: all 0.3s ease
-                font-weight: 600
+                font-weight: 500
                 box-shadow: 0px 10px 8px 0px  rgba(0,0,0,0.1)
                 border: 1px solid $secondary-color
                 background: $secondary-color
@@ -237,7 +417,7 @@ body
     width: 100%
     padding: 60px 0px 0px 0px
     position: relative
-    font-family: $font-raleway
+    font-family: $font-principal
     background: $primary-color
     svg
         position: absolute
@@ -257,7 +437,7 @@ body
                     color: rgba(255,255,255,0.8)
                     font-size: 1.250em
                     transition: all 0.3s ease
-                    font-weight: 600
+                    font-weight: 500
                     &:hover
                         color: white
             .list-nav-active 
@@ -302,6 +482,6 @@ body
         p
             font-size: 1em
             font-weight: 300
-            color: white            
+            color: white       
 
 @import components/queries    
